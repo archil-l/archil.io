@@ -1,21 +1,14 @@
-import React, { Fragment } from 'react';
-import { useIntl } from 'react-intl';
+import React from 'react';
 
-import messages from '../../contents/home';
-
-import Links from '../Links/Links';
-import Container from '../Layout/Container';
-import Row from '../Layout/Row';
-import { StyledColumn } from './styles';
 import Footer from './Footer';
 import Main from './Main';
 
 const Home = () => {
   return (
-    <Fragment>
+    <React.Fragment>
       <Main />
       <Footer />
-    </Fragment>
+    </React.Fragment>
   );
 }
 

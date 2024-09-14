@@ -1,7 +1,6 @@
 import React from 'react';
-import Container from '../Layout/Container';
-import Row from '../Layout/Row';
-import Column from '../Layout/Column';
+
+import { Container, Row, Column } from '../Layout';
 import { StyledFooter } from './styles';
 
 const Footer = () => {
