@@ -1,19 +1,9 @@
 import React from 'react';
 import { THEME } from '../constants/consts';
-
-// Define the types for the context and provider props
-type HomeContextProps = {
-  theme: string;
-  switchTheme: (theme?: string) => void;
-}
-
-type HomeContextProviderProps = {
-  children: React.ReactNode;
-}
+import { HomeContextProps, HomeContextProviderProps } from './types';
 
 const { LIGHT, DARK } = THEME;
 
-// Create the context with a default value
 const HomeContext = React.createContext<HomeContextProps>({
   theme: LIGHT,
   switchTheme: () => { },
