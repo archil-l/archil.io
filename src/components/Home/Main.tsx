@@ -12,14 +12,15 @@ const Main = () => {
     <StyledContainer role="main">
       <Row>
         <StyledColumn size='two-thirds'>
-          <h4>{formatMessage(messages.heading)}</h4>
+          <h1>{formatMessage(messages.heading)}</h1>
           <p>{formatMessage(messages.aboutPartOne)}</p>
           <p>{formatMessage(messages.aboutPartTwo)}</p>
           <Links />
           <br />
           <p>{formatMessage(messages.underConstruction)}</p>
-          <p>{formatMessage(messages.nothingYet)}</p>
-          <h5>{formatMessage(messages.stayTuned)}</h5>
+          <p><s>{formatMessage(messages.nothingYet)}</s></p>
+          <p>{formatMessage(messages.whatsDone)}</p>
+          <h2>{formatMessage(messages.stayTuned)}</h2>
         </StyledColumn>
       </Row>
     </StyledContainer>
