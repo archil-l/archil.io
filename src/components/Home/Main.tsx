@@ -6,7 +6,6 @@ import { StyledColumn, StyledContainer } from './styles';
 
 import messages from '../../contents/home';
 
-
 const Main = () => {
   const { formatMessage } = useIntl();
   return (

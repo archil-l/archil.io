@@ -1,9 +1,13 @@
 import React from 'react';
+import { ColorSchemeContext } from '../../context/ColorSchemeContext';
 
 import Footer from './Footer';
 import Main from './Main';
 
+
 const Home = () => {
+  const { theme, toggleTheme } = React.useContext(ColorSchemeContext);
+
   return (
     <React.Fragment>
       <Main />
