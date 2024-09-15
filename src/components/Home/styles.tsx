@@ -17,7 +17,6 @@ export const StyledFooter = styled.footer`
 `;
 
 export const MainWrapper = styled(Container)`
-  height: 95vh;
 
   h1 {
     font-size: 3.5rem;
