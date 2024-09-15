@@ -1,16 +1,20 @@
 import React from 'react';
-
-import { HomeContextProvider } from '../../context/HomeContext';
+import { ColorSchemeContext } from '../../context/ColorSchemeContext';
 
 import Footer from './Footer';
 import Main from './Main';
 
+
 const Home = () => {
+  const { theme, toggleTheme } = React.useContext(ColorSchemeContext);
+
+  console.log(theme);
+
   return (
-    <HomeContextProvider>
+    <React.Fragment>
       <Main />
       <Footer />
-    </HomeContextProvider>
+    </React.Fragment>
   );
 }
 

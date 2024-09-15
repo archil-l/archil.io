@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom/client';
 import { IntlProvider } from 'react-intl';
 
 import Home from './components/Home/Home';
+import { ColorSchemeProvider } from './context/ColorSchemeContext';
 
 
 const root = ReactDOM.createRoot(
@@ -12,7 +13,9 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <IntlProvider locale="en">
-      <Home />
+      <ColorSchemeProvider>
+        <Home />
+      </ColorSchemeProvider>
     </IntlProvider>
   </React.StrictMode>
 );
