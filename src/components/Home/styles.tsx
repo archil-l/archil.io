@@ -8,13 +8,15 @@ export const StyledColumn = styled(Column)`
 `;
 
 export const StyledFooter = styled.footer`
-    margin-top: 15%;
+    position: absolute;
+    bottom: 0;
+
     width: 100%;
     font-size: 1.2rem;
 
     p {
-      margin-top: 20px;
-      margin-bottom: 20px;
+      margin-top: 15px;
+      margin-bottom: 15px;
     }
 `;
 
