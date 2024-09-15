@@ -7,7 +7,7 @@ const messages = defineMessages({
     },
     aboutPartOne: {
         id: 'home.aboutPartOne',
-        defaultMessage: 'I am a frontend engineer building dynamic, semantic, accessible, and user-friendly web applications.',
+        defaultMessage: 'I am a software engineer building dynamic, semantic, accessible, and user-friendly web applications.',
     },
     aboutPartTwo: {
         id: 'home.aboutPartTwo',
