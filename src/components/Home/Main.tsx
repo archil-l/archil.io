@@ -1,17 +1,17 @@
 import { useIntl } from 'react-intl';
 
-import { Row } from '../Layout';
+import { Column, Row } from '../Layout';
 import { Links } from '../Links';
-import { StyledColumn, StyledContainer } from './styles';
+import { MainWrapper } from './styles';
 
 import messages from '../../contents/home';
 
 const Main = () => {
   const { formatMessage } = useIntl();
   return (
-    <StyledContainer role="main">
+    <MainWrapper role="main">
       <Row>
-        <StyledColumn size='two-thirds'>
+        <Column size='two-thirds'>
           <h1>{formatMessage(messages.heading)}</h1>
           <p>{formatMessage(messages.aboutPartOne)}</p>
           <p>{formatMessage(messages.aboutPartTwo)}</p>
@@ -21,9 +21,9 @@ const Main = () => {
           <p><s>{formatMessage(messages.nothingYet)}</s></p>
           <p>{formatMessage(messages.whatsDone)}</p>
           <h2>{formatMessage(messages.stayTuned)}</h2>
-        </StyledColumn>
+        </Column>
       </Row>
-    </StyledContainer>
+    </MainWrapper>
   );
 }
 

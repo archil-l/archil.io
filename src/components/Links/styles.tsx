@@ -21,5 +21,9 @@ export const LogoWrapper = styled.li`
         height: 32px;
         margin: 8px;
     }
+
+    a:visited {
+        ${({ theme }) => theme.mode === 'dark' && theme.colors.anchor};
+    }
 `;
 

@@ -6,6 +6,13 @@ export const lightTheme: DefaultTheme = {
   colors: {
     primary: '#343a40',
     background: '#f8f9fa',
+    footer: {
+      backgroundColor: '#242a20',
+      color: '#f8f9fa'
+    },
+    anchor: {
+      color: '#2f80ff'
+    }
   },
 };
 
@@ -14,5 +21,13 @@ export const darkTheme: DefaultTheme = {
   colors: {
     primary: '#f8f9fa',
     background: '#343a40',
+    footer: {
+      backgroundColor: '#727271',
+      color: '#f8f9fa'
+    },
+    anchor: {
+      color: '#2f80ff'
+    }
   },
+
 };
