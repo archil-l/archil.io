@@ -6,7 +6,11 @@ import Main from './Main';
 
 
 const Home = () => {
-  const { theme, toggleTheme } = React.useContext(ColorSchemeContext);
+  const { appearance, toggleTheme } = React.useContext(ColorSchemeContext);
+
+  React.useEffect(() => {
+    document.body.className = appearance;
+  }, [appearance]);
 
   return (
     <React.Fragment>

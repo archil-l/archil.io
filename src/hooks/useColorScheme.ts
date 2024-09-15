@@ -1,17 +1,17 @@
 import { useEffect, useState } from 'react';
 
 export interface ColorSchemeType {
-  theme: 'light' | 'dark'
+  appearance: 'light' | 'dark'
 };
 
 export const useColorScheme = () => {
-  const [colorScheme, setColorScheme] = useState<ColorSchemeType>({ theme: 'light' });
+  const [colorScheme, setColorScheme] = useState<ColorSchemeType>({ appearance: 'light' });
 
   useEffect(() => {
     const mediaQueryList = window.matchMedia('(prefers-color-scheme: dark)');
 
     const handleChange = () => {
-      setColorScheme({ theme: mediaQueryList.matches ? 'dark' : 'light' });
+      setColorScheme({ appearance: mediaQueryList.matches ? 'dark' : 'light' });
     };
 
     mediaQueryList.addEventListener('change', handleChange);
@@ -25,7 +25,7 @@ export const useColorScheme = () => {
   }, []);
 
   const toggleColorScheme = () => {
-    setColorScheme({ theme: colorScheme.theme === 'light' ? 'dark' : 'light' });
+    setColorScheme({ appearance: colorScheme.appearance === 'light' ? 'dark' : 'light' });
   }
 
   return { colorScheme, toggleColorScheme };

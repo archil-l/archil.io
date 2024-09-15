@@ -19,11 +19,15 @@ const messages = defineMessages({
     },
     nothingYet: {
         id: 'home.nothingYet',
-        defaultMessage: 'Nothing here is dynamic, semantic or accessible yet. 😅'
+        defaultMessage: 'Nothing here is dynamic, semantic or accessible yet.'
+    },
+    whatsDone: {
+        id: 'home.whatsDone',
+        defaultMessage: 'I added responsiveness and light/dark mode 🌓 support. The latter follow your OS settings and a switcher is coming soon.',
     },
     stayTuned: {
         id: 'home.stayTuned',
-        defaultMessage: 'Stay tuned, there will be updates soon!',
+        defaultMessage: 'Stay tuned, there will be more updates soon!',
     },
 });
 
