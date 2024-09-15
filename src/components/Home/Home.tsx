@@ -8,8 +8,6 @@ import Main from './Main';
 const Home = () => {
   const { theme, toggleTheme } = React.useContext(ColorSchemeContext);
 
-  console.log(theme);
-
   return (
     <React.Fragment>
       <Main />
