@@ -3,7 +3,7 @@ import { defineMessages } from 'react-intl';
 const messages = defineMessages({
     heading: {
         id: 'home.heading',
-        defaultMessage: 'Hi! 👋🏻 My name is Archil Lelashvili.',
+        defaultMessage: 'Hi! 🖖🏻 My name is Archil Lelashvili.',
     },
     aboutPartOne: {
         id: 'home.aboutPartOne',
