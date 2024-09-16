@@ -11,11 +11,11 @@ const messages = defineMessages({
     },
     aboutPartTwo: {
         id: 'home.aboutPartTwo',
-        defaultMessage: 'Welcome to my personal page. I’m excited to share my work, projects, and insights into my journey in web development. Glad to have you here!',
+        defaultMessage: `Welcome to my personal page. I'm excited to share my work, projects, and insights into my journey in web development. Glad to have you here!`,
     },
     underConstruction: {
         id: 'home.underConstruction',
-        defaultMessage: 'This page is under construction 🚧.'
+        defaultMessage: `This page is built 👨🏻‍💻 with React, TypeScript, and styled-components👨🏻‍💻. It's still under construction 🚧.`
     },
     nothingYet: {
         id: 'home.nothingYet',
@@ -23,7 +23,7 @@ const messages = defineMessages({
     },
     whatsDone: {
         id: 'home.whatsDone',
-        defaultMessage: 'I added responsiveness and light/dark mode 🌓 support. The latter follow your OS settings and there is a switcher on the top.',
+        defaultMessage: 'I added responsiveness and light/dark mode 🌓 support. The latter follow your OS settings and there is a switcher on the top. If you are curious how this page is built, checkout the ',
     },
     stayTuned: {
         id: 'home.stayTuned',

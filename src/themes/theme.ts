@@ -26,11 +26,11 @@ export const darkTheme: DefaultTheme = {
     primary: '#f8f9fa',
     background: '#343a40',
     footer: {
-      backgroundColor: '#727271',
+      backgroundColor: '#28282B',
       color: '#f8f9fa'
     },
     header: {
-      backgroundColor: '#727271',
+      backgroundColor: '#28282B',
       color: '#f8f9fa'
     },
     anchor: {
