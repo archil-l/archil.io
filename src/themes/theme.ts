@@ -7,7 +7,11 @@ export const lightTheme: DefaultTheme = {
     primary: '#343a40',
     background: '#f8f9fa',
     footer: {
-      backgroundColor: '#242a20',
+      backgroundColor: '#eff2f5',
+      color: '#343a40'
+    },
+    header: {
+      backgroundColor: '#eff2f5',
       color: '#f8f9fa'
     },
     anchor: {
@@ -22,6 +26,10 @@ export const darkTheme: DefaultTheme = {
     primary: '#f8f9fa',
     background: '#343a40',
     footer: {
+      backgroundColor: '#727271',
+      color: '#f8f9fa'
+    },
+    header: {
       backgroundColor: '#727271',
       color: '#f8f9fa'
     },
