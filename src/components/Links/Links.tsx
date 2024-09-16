@@ -12,23 +12,23 @@ import { LinkContainer } from './styles';
 
 
 const GitHubLink = () =>
-    <LogoWithLink Logo={GitHub} href={hrefs.github} message={messages.github} />;
+  <LogoWithLink Logo={GitHub} href={hrefs.github} message={messages.github} />;
 
 const LinkedInLink = () =>
-    <LogoWithLink Logo={LinkedIn} href={hrefs.linkedin} message={messages.linkedin} />;
+  <LogoWithLink Logo={LinkedIn} href={hrefs.linkedin} message={messages.linkedin} />;
 
 const ResumeLink = () =>
-    <LogoWithLink Logo={Resume} href={hrefs.resume} message={messages.resume} />;
+  <LogoWithLink Logo={Resume} href={hrefs.resume} message={messages.resume} />;
 
 
 const Links = () => {
-    return (
-        <LinkContainer>
-            <GitHubLink />
-            <LinkedInLink />
-            <ResumeLink />
-        </LinkContainer>
-    );
+  return (
+    <LinkContainer>
+      <GitHubLink />
+      <LinkedInLink />
+      <ResumeLink />
+    </LinkContainer>
+  );
 }
 
 export default Links;

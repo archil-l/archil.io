@@ -16,6 +16,20 @@ export const StyledFooter = styled.footer`
   }
 `;
 
+export const StyledHeader = styled.header`
+  padding-top: 15px;
+  padding-bottom: 15px;
+  width: 100%;
+
+  ${({ theme }) => theme.colors.header};
+
+  .column {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+`;
+
 export const MainWrapper = styled(Container)`
 
   h1 {
@@ -29,5 +43,4 @@ export const MainWrapper = styled(Container)`
   .column {
     margin-top: 20%;
   }
-
 `;
