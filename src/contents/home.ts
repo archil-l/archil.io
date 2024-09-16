@@ -15,7 +15,7 @@ const messages = defineMessages({
     },
     underConstruction: {
         id: 'home.underConstruction',
-        defaultMessage: `This page is built 👨🏻‍💻 with React, TypeScript, and styled-components👨🏻‍💻. It's still under construction 🚧.`
+        defaultMessage: `This page is built 👨🏻‍💻 using React, TypeScript, and styled-components. It's still under construction 🚧.`
     },
     nothingYet: {
         id: 'home.nothingYet',
