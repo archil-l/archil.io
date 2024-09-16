@@ -23,7 +23,7 @@ const messages = defineMessages({
     },
     whatsDone: {
         id: 'home.whatsDone',
-        defaultMessage: 'I added responsiveness and light/dark mode 🌓 support. The latter follow your OS settings and a switcher is coming soon.',
+        defaultMessage: 'I added responsiveness and light/dark mode 🌓 support. The latter follow your OS settings and there is a switcher on the top.',
     },
     stayTuned: {
         id: 'home.stayTuned',
