@@ -17,8 +17,8 @@ const ThemeToggle = () => {
     <Switch onChange={handleSwitch}
       checked={appearance === 'dark'}
       onColor={'#f8f9fa'}
-      offColor={'#343a40'}
-      onHandleColor={'#343a40'}
+      offColor={'#191970'}
+      onHandleColor={'#191970'}
       offHandleColor={'#f8f9fa'}
       checkedHandleIcon={<Moon placement='onHandle' />}
       uncheckedHandleIcon={<Sun placement='onHandle' />}
