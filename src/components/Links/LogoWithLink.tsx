@@ -14,10 +14,10 @@ const LogoWithLink = ({ Logo, href, message }: BrandedLinkProps) => {
   const { formatMessage } = useIntl();
 
   return (
-    <LogoWrapper>
+    <LogoWrapper aria-label={formatMessage(message)}>
       <Logo />
       <a href={href} target="_blank" rel="noopener noreferrer">
-        {formatMessage(message)}
+        <span>{formatMessage(message)}</span>
       </a>
     </LogoWrapper>
   );

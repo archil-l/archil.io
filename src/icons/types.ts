@@ -1,3 +1,3 @@
 export interface IconProps {
-  placement?: 'onHandle' | 'offHandle';
+  $placement?: 'onHandle' | 'offHandle';
 };
