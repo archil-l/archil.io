@@ -1,6 +1,7 @@
 import React from 'react';
 
 import ThemeToggle from '../ThemeToggle/ThemeToggle';
+
 import { Column, Container, Row } from '../Layout';
 import { StyledHeader } from './styles';
 

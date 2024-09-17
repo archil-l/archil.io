@@ -1,9 +1,9 @@
 import React from 'react';
 import { ColorSchemeContext } from '../../context/ColorSchemeContext';
 
-import Footer from './Footer';
+import Footer from '../Footer/Footer';
 import Main from './Main';
-import Header from './Header';
+import Header from '../Header/Header';
 
 
 const Home = () => {

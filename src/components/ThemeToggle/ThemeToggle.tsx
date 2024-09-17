@@ -1,20 +1,28 @@
 import React from 'react';
 import Switch from 'react-switch';
+import { useIntl } from 'react-intl';
 
 import { ColorSchemeContext } from '../../context/ColorSchemeContext';
 
 import Moon from './Moon';
 import Sun from './Sun';
 
+import messages from './messages';
+
 const ThemeToggle = () => {
+  const { formatMessage } = useIntl();
   const { appearance, toggleTheme } = React.useContext(ColorSchemeContext);
 
   const handleSwitch = () => {
     toggleTheme();
   }
 
+
+
   return (
-    <Switch onChange={handleSwitch}
+    <Switch
+      title={formatMessage(messages.toogle)}
+      onChange={handleSwitch}
       checked={appearance === 'dark'}
       onColor={'#f8f9fa'}
       offColor={'#343a40'}

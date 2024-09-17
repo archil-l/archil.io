@@ -16,8 +16,22 @@ export const lightTheme: DefaultTheme = {
     },
     anchor: {
       color: '#2f80ff'
+    },
+    sections: {
+      introduction: {
+        backgroundColor: '#f8f9fa',
+        color: '#343a40'
+      },
+      projects: {
+        backgroundColor: '#eff2f5',
+        color: '#343a40'
+      },
+      contact: {
+        backgroundColor: '#f8f9fa',
+        color: '#343a40'
+      }
     }
-  },
+  }
 };
 
 export const darkTheme: DefaultTheme = {
@@ -35,7 +49,20 @@ export const darkTheme: DefaultTheme = {
     },
     anchor: {
       color: '#2f80ff'
+    },
+    sections: {
+      introduction: {
+        backgroundColor: '#343a40',
+        color: '#f8f9fa'
+      },
+      projects: {
+        backgroundColor: '#28282B',
+        color: '#f8f9fa'
+      },
+      contact: {
+        backgroundColor: '#343a40',
+        color: '#f8f9fa'
+      }
     }
-  },
-
+  }
 };
