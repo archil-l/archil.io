@@ -13,12 +13,12 @@ const SunSvg = (props: JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>) 
   </svg>);
 
 const LogoWrapper = styled.div<IconProps>`
-  ${({ placement }) => {
+  ${({ $placement }) => {
 
-    if (placement === 'onHandle')
+    if ($placement === 'onHandle')
       return 'width:22px; height:22px;';
 
-    if (placement === 'offHandle')
+    if ($placement === 'offHandle')
       return 'width:22px; height:24px;';
   }}
 
@@ -32,9 +32,9 @@ const LogoWrapper = styled.div<IconProps>`
   }
 `;
 
-const Sun = ({ placement }: IconProps) => {
+const Sun = ({ $placement }: IconProps) => {
   return (
-    <LogoWrapper placement={placement}>
+    <LogoWrapper $placement={$placement}>
       <SunSvg aria-hidden="true" />
     </LogoWrapper>
   );

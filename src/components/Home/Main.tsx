@@ -4,7 +4,7 @@ import Introduction from '../Sections/Intoduction';
 
 const Main = () => {
   return (
-    <Introduction />
+    <Introduction $role="main" $sectionid="introduction" />
   );
 }
 

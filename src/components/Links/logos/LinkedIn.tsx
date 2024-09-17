@@ -21,7 +21,7 @@ const LogoWrapper = styled.span`
 const LinkedIn = () => {
     return (
         <LogoWrapper>
-            <LinkedInSvg />
+            <LinkedInSvg role="presentation" aria-hidden="true" />
         </LogoWrapper>
     );
 }

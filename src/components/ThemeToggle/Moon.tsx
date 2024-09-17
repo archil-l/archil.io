@@ -1,9 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { IconProps } from '../../icons/types';
-import { JSX } from 'react/jsx-runtime';
 
-const MoonSvg = (props: JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>) => (
+const MoonSvg = (props: React.SVGProps<SVGSVGElement>) => (
   <svg fill="currentcolor" xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 292.299 292.299" {...props}>
     <path d="M153.699,292.138C68.95,292.138,0,223.185,0,138.439C0,79.742,32.675,27.002,85.28,0.807
@@ -13,12 +12,12 @@ const MoonSvg = (props: JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>)
   </svg>);
 
 const LogoWrapper = styled.div<IconProps>`
-  ${({ placement }) => {
+  ${({ $placement }) => {
 
-    if (placement === 'onHandle')
+    if ($placement === 'onHandle')
       return 'width:22px; height:22px;';
 
-    if (placement === 'offHandle')
+    if ($placement === 'offHandle')
       return 'width:20px; height:24px;';
   }}
 
@@ -32,9 +31,9 @@ const LogoWrapper = styled.div<IconProps>`
     }
 `;
 
-const Moon = ({ placement }: IconProps) => {
+const Moon = ({ $placement }: IconProps) => {
   return (
-    <LogoWrapper placement={placement}>
+    <LogoWrapper $placement={$placement}>
       <MoonSvg aria-hidden="true" />
     </LogoWrapper>
   );

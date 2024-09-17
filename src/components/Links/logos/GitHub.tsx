@@ -15,7 +15,7 @@ const LogoWrapper = styled.span`
 const GitHub = () => {
   return (
     <LogoWrapper>
-      <GitHubSvg role="presentation" aria-label='GitHub logo' />
+      <GitHubSvg role="presentation" aria-hidden="true" />
     </LogoWrapper>
   );
 }
