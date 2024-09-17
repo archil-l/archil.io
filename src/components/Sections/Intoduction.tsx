@@ -10,6 +10,7 @@ const Introduction = ({ $sectionid, $role }: SectionProps) => {
   const { formatMessage } = useIntl();
   return (
     <SectionWrapper $sectionid={$sectionid} $role={$role}>
+      <br />
       <h1>{formatMessage(messages.heading)}</h1>
       <p>{formatMessage(messages.aboutPartOne)}</p>
       <p>{formatMessage(messages.aboutPartTwo)}</p>
