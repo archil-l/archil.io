@@ -6,18 +6,20 @@ export interface SectionProps {
   children?: React.ReactNode;
   $sectionid: string;
   $role?: string;
+  size?: '' | 'one' | 'two' | 'three' | 'four' | 'five' | 'six' | 'seven' | 'eight' |
+  'nine' | 'ten' | 'eleven' | 'twelve' | 'one-third' | 'two-thirds' | 'one-half' | 'full';
 }
 
 export const FullWidthBackground = styled.div<SectionProps>`
   ${({ theme, $sectionid }) => theme.colors.sections[$sectionid]}
 `;
 
-const SectionWrapper = ({ children, $sectionid, $role }: SectionProps) => {
+const SectionWrapper = ({ children, $sectionid, $role, size }: SectionProps) => {
   return (
     <FullWidthBackground $sectionid={$sectionid}>
       <Container role={$role}>
         <Row>
-          <Column size='two-thirds'>
+          <Column size={size || 'two-thirds'}>
             {children}
           </Column>
         </Row>

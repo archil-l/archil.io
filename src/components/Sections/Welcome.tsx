@@ -5,13 +5,14 @@ import { Links } from '../Links';
 import SectionWrapper, { SectionProps } from './SectionWrapper'
 
 import messages from '../../contents/home';
+import Space from '../Layout/Space';
 
-const Introduction = ({ $sectionid, $role }: SectionProps) => {
+const Welcome = ({ $sectionid, $role }: SectionProps) => {
   const { formatMessage } = useIntl();
   return (
     <SectionWrapper $sectionid={$sectionid} $role={$role}>
-      <br />
-      <h1>{formatMessage(messages.heading)}</h1>
+      <Space height="7rem" />
+      <h1 id={$sectionid}>{formatMessage(messages.heading)}</h1>
       <p>{formatMessage(messages.aboutPartOne)}</p>
       <p>{formatMessage(messages.aboutPartTwo)}</p>
       <Links />
@@ -19,9 +20,10 @@ const Introduction = ({ $sectionid, $role }: SectionProps) => {
       <p>{formatMessage(messages.underConstruction)}</p>
       <p><s>{formatMessage(messages.nothingYet)}</s></p>
       <p>{formatMessage(messages.whatsDone)}<a href="https://github.com/archil-qb/archil.io" target="_blank" rel="noopener noreferrer">source code</a>.</p>
-
+      <br />
       <h2>{formatMessage(messages.stayTuned)}</h2>
+      <Space height="10rem" />
     </SectionWrapper >);
 };
 
-export default Introduction;
+export default Welcome;
