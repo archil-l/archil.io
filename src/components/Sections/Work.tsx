@@ -32,7 +32,8 @@ const Work = ({ $sectionid, $role, size }: SectionProps) => {
         <li>Worked on spikes and built prototypes for new features, breaking down larger problems into smaller, manageable pieces.</li>
         <li>Performed accessibility testing and implemented semantic HTML, roles, keyboard navigation and improved screen-reader performance;</li>
       </ContributionList>
-
+      <br />
+      <h3><strong>To be continued...</strong></h3>
       <Space height="20rem" />
       <br />
     </SectionWrapper >);
