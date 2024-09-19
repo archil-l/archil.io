@@ -19,8 +19,16 @@ export const lightTheme: DefaultTheme = {
     anchor: {
       color: '#2f80ff'
     },
+    divider: {
+      borderTop: '2px solid #343a40'
+    },
     sections: {
-      introduction: {
+      welcome: {
+        backgroundColor: '#f8f9fa',
+        color: '#343a40',
+        transition: 'background-color 2s ease'
+      },
+      work: {
         backgroundColor: '#f8f9fa',
         color: '#343a40',
         transition: 'background-color 2s ease'
@@ -43,23 +51,30 @@ export const darkTheme: DefaultTheme = {
     primary: '#f8f9fa',
     background: '#343a40',
     footer: {
-      backgroundColor: '#28282B',
+      backgroundColor: '#1c1c1e',
       color: '#f8f9fa',
       transition: 'background-color 2s ease'
     },
     header: {
-      backgroundColor: '#28282B',
+      backgroundColor: '#1c1c1e',
       color: '#f8f9fa',
       transition: 'background-color 2s ease'
     },
     anchor: {
       color: '#2f80ff'
     },
+    divider: {
+      borderTop: '2px solid #343a40'
+    },
     sections: {
-      introduction: {
+      welcome: {
         backgroundColor: '#343a40',
         color: '#f8f9fa',
-        transition: 'background-color 2s ease'
+        transition: 'background-color 2s ease',
+      },
+      work: {
+        backgroundColor: '#28282b',
+        color: '#f8f9fa'
       },
       projects: {
         backgroundColor: '#28282B',

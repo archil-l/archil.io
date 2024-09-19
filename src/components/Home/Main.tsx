@@ -1,10 +1,16 @@
 import React from 'react';
 
-import Introduction from '../Sections/Intoduction';
+import Welcome from '../Sections/Welcome';
+import Work from '../Sections/Work';
+import Divider from '../Layout/Divider';
 
 const Main = () => {
   return (
-    <Introduction $role="main" $sectionid="introduction" />
+    <React.Fragment>
+      <Welcome $sectionid="welcome" $role="main" />
+      <Divider />
+      <Work $sectionid="work" size="eight" />
+    </React.Fragment>
   );
 }
 

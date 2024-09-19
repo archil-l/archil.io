@@ -3,11 +3,11 @@ import { defineMessages } from 'react-intl';
 const messages = defineMessages({
     heading: {
         id: 'home.heading',
-        defaultMessage: `Hi!🖖🏻 My name is Archil Lelashvili.`,
+        defaultMessage: `Welcome! 🖖🏻`,
     },
     aboutPartOne: {
         id: 'home.aboutPartOne',
-        defaultMessage: 'I am a software engineer building dynamic, semantic, accessible, and user-friendly web applications.',
+        defaultMessage: 'My name is Archil Lelashvili, I am a software engineer building dynamic, semantic, accessible, and user-friendly web applications.',
     },
     aboutPartTwo: {
         id: 'home.aboutPartTwo',
