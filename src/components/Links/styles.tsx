@@ -33,6 +33,7 @@ export const WrappedImg = styled.img`
   margin: auto;
   width: 100%;
   max-width: 350px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 `;
 
 export const ContributionList = styled.ul`
