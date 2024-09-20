@@ -29,7 +29,10 @@ export const LogoWrapper = styled.li`
 
 export const WrappedImg = styled.img`
   float: right;
+  margin-top: 0px;
   margin: 10px;
+  width: 100%;
+  max-width: 350px;
 `;
 
 export const ContributionList = styled.ul`
