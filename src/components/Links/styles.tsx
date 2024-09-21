@@ -30,7 +30,7 @@ export const LogoWrapper = styled.li`
 export const WrappedImg = styled.img`
   float: right;
   display: block;
-  margin: auto;
+  margin: 10px;
   width: 100%;
   max-width: 350px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);

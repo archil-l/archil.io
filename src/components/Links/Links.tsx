@@ -2,9 +2,9 @@ import React from 'react';
 
 import LogoWithLink from './LogoWithLink';
 
-import GitHub from './logos/GitHub';
-import LinkedIn from './logos/LinkedIn';
-import Resume from './logos/Resume';
+import GitHub from '../../icons/GitHub';
+import LinkedIn from '../../icons/LinkedIn';
+import Resume from '../../icons/Resume';
 
 import hrefs from '../../contents/hrefs';
 import messages from '../../contents/links';

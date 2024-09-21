@@ -12,4 +12,17 @@ export const StyledFooter = styled.footer`
     margin-top: 20px;
     margin-bottom: 20px;
   }
+
+  .footer-logo {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    svg {
+      width: 32px;
+      height: 32px;
+      margin-left: 8px;
+      margin-top: 8px;
+    }
+  }
+
 `;

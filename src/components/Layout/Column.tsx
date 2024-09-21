@@ -9,7 +9,7 @@ type ColumnProps = {
 
 const Column = ({ size, className, children }: ColumnProps) => {
     return (
-        <div className={`column ${size} ${className ? className : ''}`}>
+        <div className={`${size} columns ${className ? className : ''}`}>
             {children}
         </div>
     );
