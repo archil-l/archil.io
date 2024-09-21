@@ -9,7 +9,7 @@ const Main = () => {
     <React.Fragment>
       <Welcome $sectionid="welcome" $role="main" />
       <Divider />
-      <Work $sectionid="work" size="eight" />
+      <Work $sectionid="work" size="twelve" />
     </React.Fragment>
   );
 }
