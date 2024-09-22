@@ -4,18 +4,21 @@ import styled from 'styled-components';
 
 export const StyledFooter = styled.footer`
   width: 100%;
-  font-size: 1.2rem;
 
   ${({ theme }) => theme.colors.footer};
 
-  p {
-    margin-top: 20px;
-    margin-bottom: 20px;
+  p, a {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
   }
 
   .footer-logo {
     display: flex;
-    justify-content: flex-end;
+    @media ( min-width: 550px ) {
+      justify-content: flex-end;
+    }
+    justify-content: flex-start;
     align-items: center;
     svg {
       width: 32px;
@@ -23,6 +26,9 @@ export const StyledFooter = styled.footer`
       margin-left: 8px;
       margin-top: 8px;
     }
+
+
+
   }
 
 `;
