@@ -53,7 +53,7 @@ const Work = ({ $sectionid, $role, size }: SectionProps) => {
         <li>Implemented unit and integration tests using Jest and TestNG (with Java) for all new capabilities;</li>
       </ContributionList>
 
-      <Space height="20rem" />
+      <Space height="10rem" />
       <br />
     </SectionWrapper >);
 };

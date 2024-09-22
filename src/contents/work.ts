@@ -3,7 +3,7 @@ import { defineMessages } from 'react-intl';
 const messages = defineMessages({
     heading: {
         id: 'work.heading',
-        defaultMessage: `Work and Projects 👨🏻‍💻 🚀`,
+        defaultMessage: `Work 👨🏻‍💻`,
     },
     aboutPartOne: {
         id: 'work.about',
