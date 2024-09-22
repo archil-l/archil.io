@@ -29,9 +29,11 @@ export const StyledHeader = styled.header`
     margin: 0;
     padding: 0 20px 0 20px;
     color: ${({ theme }) => theme.colors.header.color};
+    transition: color 1s;
     
     &:hover {
       color: ${({ theme }) => theme.colors.primary};
+      transition: color 1s;
       
     }
   }
