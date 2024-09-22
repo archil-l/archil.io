@@ -13,7 +13,7 @@ export const lightTheme: DefaultTheme = {
     },
     header: {
       backgroundColor: '#eff2f5',
-      color: '#f8f9fa',
+      color: '#343a40',
       transition: 'background-color 2s ease'
     },
     anchor: {
@@ -34,7 +34,7 @@ export const lightTheme: DefaultTheme = {
         transition: 'background-color 2s ease'
       },
       projects: {
-        backgroundColor: '#eff2f5',
+        backgroundColor: '#f8f9fa',
         color: '#343a40'
       },
       contact: {
@@ -57,7 +57,7 @@ export const darkTheme: DefaultTheme = {
     },
     header: {
       backgroundColor: '#1c1c1e',
-      color: '#f8f9fa',
+      color: '#bdbfc1',
       transition: 'background-color 2s ease'
     },
     anchor: {
@@ -77,11 +77,11 @@ export const darkTheme: DefaultTheme = {
         color: '#f8f9fa'
       },
       projects: {
-        backgroundColor: '#28282B',
+        backgroundColor: '#343a40',
         color: '#f8f9fa'
       },
       contact: {
-        backgroundColor: '#343a40',
+        backgroundColor: '#28282b',
         color: '#f8f9fa'
       }
     }
