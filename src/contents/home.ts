@@ -15,7 +15,7 @@ const messages = defineMessages({
     },
     whatsDone: {
         id: 'home.whatsDone',
-        defaultMessage: `This page is built 👨🏻‍💻 using React, TypeScript, and styled-components. I haven't used any templates, just skeleton.css for initial basic styling. I added responsiveness and light/dark mode 🌓 support. The latter follow your OS settings and there is a switcher on the top. If you are curious how this page is built, checkout the `,
+        defaultMessage: `This page is built 👨🏻‍💻 using React, TypeScript, and styled-components. I haven't used any templates, just skeleton.css for initial basic styling. I added responsiveness and light/dark mode 🌓 support. The latter follows your OS settings and there is a switcher on the top. If you are curious how this page is built, checkout the `,
     },
     stayTuned: {
         id: 'home.stayTuned',
