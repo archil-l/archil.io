@@ -1,5 +1,5 @@
 const hrefs = {
-    github: 'https://github.com/archil-qb',
+    github: 'https://github.com/archil-l',
     linkedin: 'https://www.linkedin.com/in/archil-nu/',
     resume: 'https://1drv.ms/b/s!AuJuRAdeWsEhiq4iJx0hAS79rnre1A',
     newNav: 'https://helpv2.quickbase.com/hc/en-us/articles/30212936236948-Quickbase-September-2024-Release-Notes#h_01J7BD3PQ33X5HVGPX3SEJSCM8',
