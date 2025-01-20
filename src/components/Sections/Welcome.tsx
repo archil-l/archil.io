@@ -17,7 +17,7 @@ const Welcome = ({ $sectionid, $role }: SectionProps) => {
       <p>{formatMessage(messages.aboutPartTwo)}</p>
       <Links />
       <br />
-      <p>{formatMessage(messages.whatsDone)}<a href="https://github.com/archil-qb/archil.io" target="_blank" rel="noopener noreferrer">source code</a>.</p>
+      <p>{formatMessage(messages.whatsDone)}<a href="https://github.com/archil-l/archil.io" target="_blank" rel="noopener noreferrer">source code</a>.</p>
       <Space height="7rem" />
     </SectionWrapper >);
 };
