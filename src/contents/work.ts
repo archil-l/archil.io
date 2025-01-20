@@ -7,7 +7,7 @@ const messages = defineMessages({
     },
     aboutPartOne: {
         id: 'work.about',
-        defaultMessage: 'I work as a Software Engineer at Quickbase Inc. I joined in 2021 as a Software Engineer Co-op and have since advanced to Software Engineer II. Quickbase is a dynamic work management platform. My focus is on building  intuitive, streamlined and accessible user experience using React, TypeScript and JavaScript. Below are major features I have contributed to:'
+        defaultMessage: 'I work as Frontend Engineer at Amazon Robotics, were I create scalable, reliable, and performant user interfaces for AR Sortation Planning team. I have previously worked at Quickbase Inc, joining as a Software Engineer Co-op and growing to Software Engineer II. Quickbase is a dynamic work management platform. My focus was on building intuitive, streamlined and accessible user experience using React, TypeScript and JavaScript. Below are the features I have contributed to:'
     }
 });
 

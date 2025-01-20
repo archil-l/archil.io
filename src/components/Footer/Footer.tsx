@@ -11,7 +11,7 @@ const Footer = () => {
 			<Container>
 				<Row>
 					<Column size="six">
-						<p>&copy; 2024 Archil Lelashvili</p>
+						<p>&copy; 2025 Archil Lelashvili</p>
 					</Column>
 					<Column size="six" className='footer-logo'>
 						<p>Powered by <a href="https://reactjs.org/" target="_blank" rel="noreferrer">React</a></p>
