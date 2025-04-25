@@ -5,8 +5,8 @@ import Footer from '../Footer/Footer';
 import Main from './Main';
 import Header from '../Header/Header';
 
-const Home = () => {
-  const { appearance, toggleTheme } = React.useContext(ColorSchemeContext);
+const Home: React.FC = () => {
+  const { appearance } = React.useContext(ColorSchemeContext);
 
   React.useEffect(() => {
     document.body.className = appearance;

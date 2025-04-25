@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import { createContext, type ReactNode } from 'react';
 import { useColorScheme, ColorSchemeType } from '../hooks/useColorScheme';
 import { ThemeProvider } from 'styled-components';
 import { darkTheme, lightTheme } from '../themes/theme';

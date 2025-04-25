@@ -31,11 +31,11 @@ const LogoWrapper = styled.div<IconProps>`
 
   svg {
     width: 12px;
-    color: ${({ theme }) => 'yellow'};
+    color: yellow;
   }
 `;
 
-const Moon = ({ $placement }: IconProps) => {
+const Moon: React.FC<IconProps> = ({ $placement }) => {
   return (
     <LogoWrapper $placement={$placement}>
       <MoonSvg aria-hidden="true" />
