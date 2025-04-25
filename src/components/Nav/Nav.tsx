@@ -7,7 +7,6 @@ interface NavProps {
 }
 
 const Nav = ({ sectionId, title }: NavProps) => {
-
   const { formatMessage } = useIntl();
 
   const handleNavigate = () => {
@@ -16,8 +15,10 @@ const Nav = ({ sectionId, title }: NavProps) => {
   };
 
   return (
-    <button className="nav-button" onClick={handleNavigate}>{formatMessage(title)}</button>
+    <button className="nav-button" onClick={handleNavigate}>
+      {formatMessage(title)}
+    </button>
   );
-}
+};
 
 export default Nav;

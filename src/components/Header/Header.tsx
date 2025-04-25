@@ -15,28 +15,26 @@ const Header = () => {
     <StyledHeader>
       <Container>
         <Row>
-          <Column size='two'>
-            <ul className='navbar-list'>
-              <li className='navbar-item'>
+          <Column size="two">
+            <ul className="navbar-list" role="navigation">
+              <li className="navbar-item">
                 <Nav sectionId={WELCOME} title={messages.welcome} />
               </li>
-              <li className='navbar-item'>
+              <li className="navbar-item">
                 <Nav sectionId={WORK} title={messages.work} />
               </li>
-              <li className='navbar-item'>
+              <li className="navbar-item">
                 <Nav sectionId={PROJECTS} title={messages.projects} />
               </li>
             </ul>
           </Column>
-          <Column size='one' className='toggle-container'>
+          <Column size="one" className="toggle-container">
             <ThemeToggle />
           </Column>
         </Row>
       </Container>
-    </StyledHeader >
+    </StyledHeader>
   );
-
 };
 
 export default Header;
-

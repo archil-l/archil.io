@@ -4,8 +4,9 @@ import styled from 'styled-components';
 export const StyledHeader = styled.header`
   padding-top: 15px;
   padding-bottom: 15px;
-
-  ${({ theme }) => theme.colors.header};
+  background-color: ${({ theme }) => theme.colors.header.backgroundColor};
+  color: ${({ theme }) => theme.colors.header.color};
+  transition: ${({ theme }) => theme.colors.header.transition};
 
   .row {
     display: flex;
@@ -30,17 +31,14 @@ export const StyledHeader = styled.header`
     padding: 0 20px 0 20px;
     color: ${({ theme }) => theme.colors.header.color};
     transition: color 1s;
-    
+
     &:hover {
       color: ${({ theme }) => theme.colors.primary};
       transition: color 1s;
-      
     }
   }
 
-  .toggle-container {  
-  margin-top: 6px  
+  .toggle-container {
+    margin-top: 6px;
   }
-
-
 `;

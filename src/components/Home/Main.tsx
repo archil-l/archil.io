@@ -18,6 +18,6 @@ const Main = () => {
       <Projects $sectionid={PROJECTS} size="twelve" />
     </React.Fragment>
   );
-}
+};
 
 export default Main;

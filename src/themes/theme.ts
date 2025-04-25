@@ -9,40 +9,48 @@ export const lightTheme: DefaultTheme = {
     footer: {
       backgroundColor: '#eff2f5',
       color: '#343a40',
-      transition: 'background-color 2s ease'
+      transition: 'background-color 2s ease',
     },
     header: {
       backgroundColor: '#eff2f5',
       color: '#343a40',
-      transition: 'background-color 2s ease'
+      transition: 'background-color 2s ease',
     },
     anchor: {
-      color: '#2f80ff'
+      color: '#2f80ff',
     },
     divider: {
-      borderTop: '2px solid #343a40'
+      borderTop: '2px solid #343a40',
+    },
+    error: {
+      backgroundColor: '#fff5f5',
+      textColor: '#e53e3e',
+      buttonBackground: '#e53e3e',
+      buttonText: '#ffffff',
     },
     sections: {
       welcome: {
         backgroundColor: '#f8f9fa',
         color: '#343a40',
-        transition: 'background-color 2s ease'
+        transition: 'background-color 2s ease',
       },
       work: {
         backgroundColor: '#f8f9fa',
         color: '#343a40',
-        transition: 'background-color 2s ease'
+        transition: 'background-color 2s ease',
       },
       projects: {
         backgroundColor: '#f8f9fa',
-        color: '#343a40'
+        color: '#343a40',
+        transition: 'background-color 2s ease',
       },
       contact: {
         backgroundColor: '#f8f9fa',
-        color: '#343a40'
-      }
-    }
-  }
+        color: '#343a40',
+        transition: 'background-color 2s ease',
+      },
+    },
+  },
 };
 
 export const darkTheme: DefaultTheme = {
@@ -53,18 +61,24 @@ export const darkTheme: DefaultTheme = {
     footer: {
       backgroundColor: '#1c1c1e',
       color: '#f8f9fa',
-      transition: 'background-color 2s ease'
+      transition: 'background-color 2s ease',
     },
     header: {
       backgroundColor: '#1c1c1e',
       color: '#bdbfc1',
-      transition: 'background-color 2s ease'
+      transition: 'background-color 2s ease',
     },
     anchor: {
-      color: '#2f80ff'
+      color: '#2f80ff',
     },
     divider: {
-      borderTop: '2px solid #343a40'
+      borderTop: '2px solid #343a40',
+    },
+    error: {
+      backgroundColor: '#2d2a2e',
+      textColor: '#ff6b6b',
+      buttonBackground: '#ff6b6b',
+      buttonText: '#1a1a1a',
     },
     sections: {
       welcome: {
@@ -74,16 +88,19 @@ export const darkTheme: DefaultTheme = {
       },
       work: {
         backgroundColor: '#28282b',
-        color: '#f8f9fa'
+        color: '#f8f9fa',
+        transition: 'background-color 2s ease',
       },
       projects: {
         backgroundColor: '#343a40',
-        color: '#f8f9fa'
+        color: '#f8f9fa',
+        transition: 'background-color 2s ease',
       },
       contact: {
         backgroundColor: '#28282b',
-        color: '#f8f9fa'
-      }
-    }
-  }
+        color: '#f8f9fa',
+        transition: 'background-color 2s ease',
+      },
+    },
+  },
 };

@@ -15,9 +15,7 @@ const ThemeToggle = () => {
 
   const handleSwitch = () => {
     toggleTheme();
-  }
-
-
+  };
 
   return (
     <Switch
@@ -30,16 +28,16 @@ const ThemeToggle = () => {
       offColor={'#343a40'}
       onHandleColor={'#195070'}
       offHandleColor={'#f8f9fa'}
-      checkedHandleIcon={<Moon $placement='onHandle' />}
-      uncheckedHandleIcon={<Sun $placement='onHandle' />}
-      uncheckedIcon={<Moon $placement='offHandle' />}
-      checkedIcon={<Sun $placement='offHandle' />}
+      checkedHandleIcon={<Moon $placement="onHandle" />}
+      uncheckedHandleIcon={<Sun $placement="onHandle" />}
+      uncheckedIcon={<Moon $placement="offHandle" />}
+      checkedIcon={<Sun $placement="offHandle" />}
       handleDiameter={22}
       height={24}
       width={42}
       borderRadius={12}
     />
   );
-}
+};
 
 export default ThemeToggle;

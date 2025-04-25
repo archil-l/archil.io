@@ -1,7 +1,7 @@
 import React from 'react';
 import { useIntl } from 'react-intl';
 
-import SectionWrapper, { SectionProps } from './SectionWrapper'
+import SectionWrapper, { SectionProps } from './SectionWrapper';
 
 import messages from '../../contents/projects';
 import Space from '../Layout/Space';
@@ -14,11 +14,10 @@ const Projects = ({ $sectionid, $role, size }: SectionProps) => {
       <h2 id={$sectionid}>{formatMessage(messages.heading)}</h2>
       <p>{formatMessage(messages.aboutPartOne)}</p>
 
-
-
       <Space height="20rem" />
       <br />
-    </SectionWrapper >);
+    </SectionWrapper>
+  );
 };
 
 export default Projects;

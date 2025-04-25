@@ -63,7 +63,7 @@ module.exports = {
   appTsConfig: resolveApp('tsconfig.json'),
   appJsConfig: resolveApp('jsconfig.json'),
   yarnLockFile: resolveApp('yarn.lock'),
-  testsSetup: resolveModule(resolveApp, 'src/setupTests'),
+  testsSetup: resolveModule(resolveApp, 'src/tests/setupTests'),
   proxySetup: resolveApp('src/setupProxy.js'),
   appNodeModules: resolveApp('node_modules'),
   appWebpackCache: resolveApp('node_modules/.cache'),
@@ -72,6 +72,6 @@ module.exports = {
   publicUrlOrPath,
 };
 
-
-
+// It will return a relative path to the `public` folder.
+// Regardless of where it's located in the volume.
 module.exports.moduleFileExtensions = moduleFileExtensions;

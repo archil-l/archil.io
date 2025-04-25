@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 
 export interface ColorSchemeType {
-  appearance: 'light' | 'dark'
-};
+  appearance: 'light' | 'dark';
+}
 
 export const useColorScheme = () => {
   const [colorScheme, setColorScheme] = useState<ColorSchemeType>({ appearance: 'light' });
@@ -26,7 +26,7 @@ export const useColorScheme = () => {
 
   const toggleColorScheme = () => {
     setColorScheme({ appearance: colorScheme.appearance === 'light' ? 'dark' : 'light' });
-  }
+  };
 
   return { colorScheme, toggleColorScheme };
 };

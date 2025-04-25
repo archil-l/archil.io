@@ -11,7 +11,7 @@ type ColorProviderProps = {
   children: ReactNode;
 };
 
-const initialTheme: ColorContextType = { appearance: 'light', toggleTheme: () => { } };
+const initialTheme: ColorContextType = { appearance: 'light', toggleTheme: () => {} };
 
 // Create the context
 export const ColorSchemeContext = createContext<ColorContextType>(initialTheme);
@@ -22,10 +22,10 @@ export const ColorSchemeProvider = ({ children }: ColorProviderProps) => {
   const currentTheme = colorScheme.appearance === 'dark' ? darkTheme : lightTheme;
 
   return (
-    <ColorSchemeContext.Provider value={{ appearance: colorScheme.appearance, toggleTheme: toggleColorScheme }}>
-      <ThemeProvider theme={currentTheme}>
-        {children}
-      </ThemeProvider>
+    <ColorSchemeContext.Provider
+      value={{ appearance: colorScheme.appearance, toggleTheme: toggleColorScheme }}
+    >
+      <ThemeProvider theme={currentTheme}>{children}</ThemeProvider>
     </ColorSchemeContext.Provider>
   );
 };

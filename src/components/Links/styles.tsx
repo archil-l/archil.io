@@ -15,15 +15,15 @@ export const LogoWrapper = styled.li`
   display: flex;
   flex-direction: row;
   align-items: center;
-  
+
   svg {
-      width: 32px;
-      height: 32px;
-      margin: 8px;
+    width: 32px;
+    height: 32px;
+    margin: 8px;
   }
 
   a:visited {
-      ${({ theme }) => theme.mode === 'dark' && theme.colors.anchor};
+    ${({ theme }) => theme.mode === 'dark' && theme.colors.anchor};
   }
 `;
 
@@ -39,5 +39,5 @@ export const WrappedImg = styled.img`
 export const ContributionList = styled.ul`
   margin-top: 15px;
   margin-left: 20px;
- list-style-position: outside;
+  list-style-position: outside;
 `;

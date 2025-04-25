@@ -1,17 +1,36 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Column, Container, Row } from '../Layout';
+import { SectionId } from '../../constants/consts';
 
 export interface SectionProps {
   children?: React.ReactNode;
-  $sectionid: string;
+  $sectionid: SectionId;
   $role?: string;
-  size?: '' | 'one' | 'two' | 'three' | 'four' | 'five' | 'six' | 'seven' | 'eight' |
-  'nine' | 'ten' | 'eleven' | 'twelve' | 'one-third' | 'two-thirds' | 'one-half' | 'full';
+  size?:
+    | ''
+    | 'one'
+    | 'two'
+    | 'three'
+    | 'four'
+    | 'five'
+    | 'six'
+    | 'seven'
+    | 'eight'
+    | 'nine'
+    | 'ten'
+    | 'eleven'
+    | 'twelve'
+    | 'one-third'
+    | 'two-thirds'
+    | 'one-half'
+    | 'full';
 }
 
 export const FullWidthBackground = styled.div<SectionProps>`
-  ${({ theme, $sectionid }) => theme.colors.sections[$sectionid]}
+  background-color: ${({ theme, $sectionid }) => theme.colors.sections[$sectionid].backgroundColor};
+  color: ${({ theme, $sectionid }) => theme.colors.sections[$sectionid].color};
+  transition: ${({ theme, $sectionid }) => theme.colors.sections[$sectionid].transition};
 `;
 
 const SectionWrapper = ({ children, $sectionid, $role, size }: SectionProps) => {
@@ -19,9 +38,7 @@ const SectionWrapper = ({ children, $sectionid, $role, size }: SectionProps) => 
     <FullWidthBackground $sectionid={$sectionid}>
       <Container role={$role}>
         <Row>
-          <Column size={size || 'two-thirds'}>
-            {children}
-          </Column>
+          <Column size={size || 'two-thirds'}>{children}</Column>
         </Row>
       </Container>
     </FullWidthBackground>
