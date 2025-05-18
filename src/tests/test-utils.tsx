@@ -12,7 +12,7 @@ interface RenderWithProvidersProps {
 }
 
 // @ts-ignore
-const TestIntlProvider = IntlProvider as React.ComponentType<any>;
+const TestIntlProvider = IntlProvider as React.ComponentType<React.Fragment>;
 
 const AllTheProviders = ({
   children,
