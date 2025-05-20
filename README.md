@@ -1,8 +1,6 @@
-# archil.io
-
 Personal website built with React and TypeScript. Visit at [archil.io](https://archil.io)
 
-## Features
+### Features
 
 - Light/Dark mode that follows OS settings with manual toggle
 - Responsive design using skeleton.css
