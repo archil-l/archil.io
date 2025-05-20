@@ -8,7 +8,7 @@ const messages = defineMessages({
   aboutPartOne: {
     id: 'work.about',
     defaultMessage:
-      'I’m a Frontend Engineer II on the Sortation Planning team at Amazon Robotics, where I build scalable, reliable, and high-performance web applications to manage and monitor robotic equipment used for outbound dock automation ',
+      'I’m a Frontend Engineer II on the Sortation Planning team at Amazon Robotics. In my current role, I build scalable, reliable, and high-performance web applications to manage and monitor robotic equipment used for outbound dock automation ',
   },
   aboutPartTwo: {
     id: 'work.aboutPartTwo',
