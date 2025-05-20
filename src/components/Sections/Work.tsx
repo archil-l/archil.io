@@ -17,10 +17,10 @@ const Work = ({ $sectionid, $role, size }: SectionProps) => {
       <p>
         {formatMessage(messages.aboutPartOne)}
         <a href={hrefs.robotics} target="_blank" rel="noopener noreferrer">
-          (see Amazon Robotics)
+          (see Amazon Robotics).
         </a>
-        {formatMessage(messages.aboutPartTwo)}
       </p>
+      <p>{formatMessage(messages.aboutPartTwo)}</p>
       <h3>
         <strong>Quickbase's Navigation</strong> (
         <a href={hrefs.newNav} target="_blank" rel="noopener noreferrer">
