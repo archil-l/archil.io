@@ -14,7 +14,8 @@
     "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,css,md}'",
     "prepare": "husky",
     "predeploy": "yarn build",
-    "deploy": "gh-pages -d build --cname archil.io"
+    "deploy": "gh-pages -d build --cname archil.io",
+    "publish": "yarn deploy"
   },
   "dependencies": {
     "react": "^18.3.1",
