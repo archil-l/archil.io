@@ -8,12 +8,12 @@ const messages = defineMessages({
   aboutPartOne: {
     id: 'work.about',
     defaultMessage:
-      'I’m a Frontend Engineer II on the Sortation Planning team at Amazon Robotics. In my current role, I build scalable, reliable, and high-performance web applications to manage and monitor robotic equipment used for outbound dock automation ',
+      "I'm a Frontend Engineer II on the Sortation Planning team at Amazon Robotics. In my current role, I build scalable, reliable, and high-performance web applications to manage and monitor robotic equipment used for outbound dock automation ",
   },
   aboutPartTwo: {
     id: 'work.aboutPartTwo',
     defaultMessage:
-      '. Previously, I worked at Quickbase Inc., starting as a Software Engineer Co-op and advancing to Software Engineer II. Quickbase is a dynamic work management platform, and during my time there, I focused on creating intuitive, streamlined, and accessible user experiences using React, TypeScript, and JavaScript. Below are some of the key features I contributed to:',
+      '. I previously worked at the enterprise SaaS platform Quickbase, where I joined as a Software Engineering Co-op and advanced to the role of Software Engineer II. I spent most of my time on a UI infrastructure team, building new features, reusable components, and contributing to Quickbase’s design system library. I also did significant work on web accessibility testing and improvements—as my team owned this area of expertise—both within my own projects and in collaboration with other teams. I worked primarily in React, using TypeScript and JavaScript, and I’m comfortable with tools in this domain, including those used for performance profiling and accessibility testing. Below are some of the key features I contributed to::',
   },
 });
 
