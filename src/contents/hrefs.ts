@@ -6,6 +6,7 @@ interface Hrefs {
   github: string;
   linkedin: string;
   resume: string;
+  robotics: string;
   newNav: string;
   newSummaryReport: string;
   newFormsExperience: string;
@@ -20,6 +21,7 @@ const socialLinks = {
 };
 
 const documentationLinks = {
+  robotics: 'https://www.aboutamazon.com/news/operations/amazon-robotics-robots-fulfillment-center',
   newNav:
     'https://helpv2.quickbase.com/hc/en-us/articles/30212936236948-Quickbase-September-2024-Release-Notes#h_01J7BD3PQ33X5HVGPX3SEJSCM8',
   newSummaryReport:

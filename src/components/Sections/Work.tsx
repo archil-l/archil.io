@@ -14,7 +14,13 @@ const Work = ({ $sectionid, $role, size }: SectionProps) => {
     <SectionWrapper $sectionid={$sectionid} $role={$role} size={size}>
       <Space height="7rem" />
       <h2 id={$sectionid}>{formatMessage(messages.heading)}</h2>
-      <p>{formatMessage(messages.aboutPartOne)}</p>
+      <p>
+        {formatMessage(messages.aboutPartOne)}
+        <a href={hrefs.robotics} target="_blank" rel="noopener noreferrer">
+          (see Amazon Robotics)
+        </a>
+        {formatMessage(messages.aboutPartTwo)}
+      </p>
       <h3>
         <strong>Quickbase's Navigation</strong> (
         <a href={hrefs.newNav} target="_blank" rel="noopener noreferrer">
