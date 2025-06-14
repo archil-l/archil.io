@@ -25,7 +25,6 @@ Introductory core course focused on the principles and practices of application 
 
 - Conducted lab sessions, prepared instructional materials, and created lab recordings to support student learning.
 - Assisted with assignment creation, code reviews, grading, and providing feedback to students.
-- Supported course delivery and collaborated with faculty and other teaching assistants.
 
 ### Professional Experience
 
