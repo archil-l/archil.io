@@ -1,7 +1,7 @@
 import React from 'react';
 import { ColorSchemeContext } from '../../context/color-scheme-context';
 
-import Footer from '../footer/footer';
+import Footer from '../Footer/footer';
 import Main from './main';
 import Header from '../header/header';
 
