@@ -2,12 +2,12 @@ import React from 'react';
 import { useIntl } from 'react-intl';
 import type { HTMLAttributes } from 'react';
 
-import Markdown from '../markdown';
-
-import SectionWrapper, { SectionProps } from './section-wrapper';
+import Markdown from '../markdown/markdown';
 import Space from '../layout/space';
 import { useContent } from '../../hooks/use-content';
 import { getMarkdownPath } from '../../content/content-utils';
+
+import SectionWrapper, { SectionProps } from './section-wrapper';
 
 const Section = ({ $sectionid, $role, size }: SectionProps) => {
   const { locale } = useIntl();
