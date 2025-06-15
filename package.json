@@ -1,5 +1,5 @@
 {
-  "name": "archil.me",
+  "name": "archil.io",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -15,7 +15,7 @@
     "prepare": "husky",
     "predeploy": "yarn build",
     "deploy": "gh-pages -d build --cname archil.io",
-    "copy-md": "cpx \"src/contents/*.md\" public/contents/"
+    "copy-md": "cpx \"src/content/*.md\" public/content/"
   },
   "dependencies": {
     "react": "^18.3.1",

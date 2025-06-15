@@ -1,7 +1,7 @@
 import React from 'react';
 import { screen, fireEvent } from '@testing-library/react';
 import { renderWithProviders } from '../../../tests/test-utils';
-import ThemeToggle from '../ThemeToggle';
+import ThemeToggle from '../theme-toggle';
 
 describe('ThemeToggle', () => {
   const mockToggleTheme = jest.fn();

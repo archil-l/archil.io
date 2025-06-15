@@ -17,18 +17,15 @@
     "jsx": "react-jsx",
     "baseUrl": "src",
     "paths": {
-      "@components/*": ["components/*"],
-      "@contents/*": ["contents/*"],
-      "@context/*": ["context/*"],
-      "@hooks/*": ["hooks/*"],
-      "@icons/*": ["icons/*"],
-      "@utils/*": ["utils/*"],
-      "@types/*": ["types/*"]
+      "@*": ["*"],
+      "@/*": ["*"]
     },
+    "types": ["node", "jest", "react", "react-dom"],
+    "typeRoots": ["node_modules/@types"],
     "noImplicitAny": true,
     "noImplicitThis": true,
     "strictNullChecks": true,
     "strictFunctionTypes": true
   },
-  "include": ["src"]
+  "include": ["src/**/*.ts", "src/**/*.tsx"]
 }

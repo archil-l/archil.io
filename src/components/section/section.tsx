@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
+import { useIntl } from 'react-intl';
+
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
-import { useIntl } from 'react-intl';
-import SectionWrapper, { SectionProps } from './SectionWrapper';
+
+import SectionWrapper, { SectionProps } from './section-wrapper';
 import Space from '../layout/space';
-import { getMarkdownPath } from '../../contents/content-utils';
+import { getMarkdownPath } from '../../content/content-utils';
 
 const Section = ({ $sectionid, $role, size }: SectionProps) => {
   const { locale } = useIntl();

@@ -4,8 +4,8 @@ import { useIntl } from 'react-intl';
 
 import { ColorSchemeContext } from '../../context/color-scheme-context';
 
-import Moon from './Moon';
-import Sun from './Sun';
+import Moon from './moon';
+import Sun from './sun';
 
 import messages from './messages';
 

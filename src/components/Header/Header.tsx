@@ -1,7 +1,9 @@
 import React from 'react';
 
 import ThemeToggle from '../theme-toggle/theme-toggle';
-import { Column, Container, Row } from '../layout';
+import Column from '../layout/column';
+import Container from '../layout/container';
+import Row from '../layout/row';
 import { StyledHeader } from './styles';
 
 import Nav from '../nav/nav';

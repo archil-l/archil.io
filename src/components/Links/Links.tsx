@@ -6,7 +6,7 @@ import GitHub from '../../icons/github';
 import LinkedIn from '../../icons/linkedin';
 import Resume from '../../icons/resume';
 
-import hrefs from '../../contents/hrefs';
+import hrefs from '../../content/hrefs';
 import { LinkContainer } from './styles';
 
 const LINK_LABELS = {

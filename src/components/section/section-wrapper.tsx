@@ -1,7 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Column, Container, Row } from '../Layout';
 import { SectionIds } from 'constants/consts';
+import Column from '../layout/column';
+import Container from '../layout/container';
+import Row from '../layout/row';
 
 export interface SectionProps {
   children?: React.ReactNode;
