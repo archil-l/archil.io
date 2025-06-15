@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { getAllByText, render } from '@testing-library/react';
 import Main from './main';
 import { SectionProps } from '@components/section/section-wrapper';
 
@@ -23,11 +23,28 @@ jest.mock('../../constants/consts', () => ({
 }));
 
 describe('Main', () => {
-  it('renders all sections and dividers', () => {
+  it('renders Welcome section', () => {
     const { getByText } = render(<Main />);
+
     expect(getByText('Section welcome')).toBeInTheDocument();
-    expect(getByText('Divider')).toBeInTheDocument();
+  });
+
+  it('renders Work section', () => {
+    const { getByText } = render(<Main />);
+
     expect(getByText('Section work')).toBeInTheDocument();
+  });
+
+  it('renders Projects section', () => {
+    const { getByText } = render(<Main />);
+
     expect(getByText('Section projects')).toBeInTheDocument();
+  });
+
+  it('renders all dividers', () => {
+    const { getAllByText } = render(<Main />);
+
+    const dividers = getAllByText('Divider');
+    expect(dividers.length).toEqual(2);
   });
 });

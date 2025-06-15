@@ -1,3 +1,12 @@
+const { pathsToModuleNameMapper } = require('ts-jest');
+const { compilerOptions } = require('./tsconfig.json');
+
+module.exports = {
+  preset: 'ts-jest',
+
+  moduleDirectories: ['node_modules', '<rootDir>'],
+};
+
 module.exports = {
   roots: ['<rootDir>/src'],
   testMatch: ['**/__tests__/**/*.+(ts|tsx|js)', '**/?(*.)+(spec|test).+(ts|tsx|js)'],
@@ -6,13 +15,6 @@ module.exports = {
   },
   setupFilesAfterEnv: ['<rootDir>/src/tests/setupTests.ts'],
   moduleNameMapper: {
-    '^@components/(.*)$': '<rootDir>/src/components/$1',
-    '^@contents/(.*)$': '<rootDir>/src/contents/$1',
-    '^@context/(.*)$': '<rootDir>/src/context/$1',
-    '^@hooks/(.*)$': '<rootDir>/src/hooks/$1',
-    '^@icons/(.*)$': '<rootDir>/src/icons/$1',
-    '^@utils/(.*)$': '<rootDir>/src/utils/$1',
-    '^@types/(.*)$': '<rootDir>/src/types/$1',
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
   },
   testEnvironment: 'jsdom',

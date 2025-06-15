@@ -16,8 +16,6 @@ const Nav = ({ sectionId }: NavProps) => {
 
   const labelKey = `${sectionId || SectionIds.Welcome}`.toLowerCase() as keyof typeof navMessages;
 
-  console.log(labelKey, navMessages[labelKey]);
-
   return (
     <button className="nav-button" onClick={handleNavigate}>
       {formatMessage(navMessages[labelKey])}
