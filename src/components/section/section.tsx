@@ -1,42 +1,37 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useIntl } from 'react-intl';
+import type { HTMLAttributes } from 'react';
 
-import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
-import rehypeRaw from 'rehype-raw';
+import Markdown from '../markdown';
 
 import SectionWrapper, { SectionProps } from './section-wrapper';
 import Space from '../layout/space';
+import { useContent } from '../../hooks/use-content';
 import { getMarkdownPath } from '../../content/content-utils';
 
 const Section = ({ $sectionid, $role, size }: SectionProps) => {
   const { locale } = useIntl();
-  const [content, setContent] = useState('');
-
-  useEffect(() => {
-    const path = getMarkdownPath($sectionid.toLowerCase(), locale);
-    if (!path) {
-      setContent('');
-      return;
-    }
-    fetch(path)
-      .then(res => res.text())
-      .then(setContent)
-      .catch(() => setContent('Failed to load content.'));
-  }, [locale, $sectionid]);
+  const path = getMarkdownPath($sectionid.toLowerCase(), locale);
+  const { content, isLoading, isError } = useContent(path);
 
   return (
-    <SectionWrapper $sectionid={$sectionid} $role={$role} size={size}>
+    <SectionWrapper {...{ $sectionid, $role, size }}>
       <Space height="7rem" />
-      <ReactMarkdown
-        remarkPlugins={[remarkGfm]}
-        rehypePlugins={[rehypeRaw]}
-        components={{
-          img: props => <img {...props} style={{ width: '300px', maxWidth: '100%' }} />,
-        }}
-      >
-        {content}
-      </ReactMarkdown>
+      {isLoading ? (
+        <div>Loading...</div>
+      ) : isError ? (
+        <div>Failed to load content.</div>
+      ) : (
+        <Markdown
+          components={{
+            img: (props: HTMLAttributes<HTMLImageElement>) => (
+              <img {...props} style={{ width: '300px', maxWidth: '100%' }} />
+            ),
+          }}
+        >
+          {content}
+        </Markdown>
+      )}
       <Space height="7rem" />
     </SectionWrapper>
   );

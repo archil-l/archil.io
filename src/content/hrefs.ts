@@ -2,17 +2,6 @@
  * Collection of external URLs used throughout the application
  */
 
-interface Hrefs {
-  github: string;
-  linkedin: string;
-  resume: string;
-  robotics: string;
-  newNav: string;
-  newSummaryReport: string;
-  newFormsExperience: string;
-  newDashboardWidget: string;
-}
-
 const socialLinks = {
   github: 'https://github.com/archil-l',
   linkedin: 'https://www.linkedin.com/in/archil-l/',
@@ -32,7 +21,7 @@ const documentationLinks = {
     'https://helpv2.quickbase.com/hc/en-us/articles/4418012983828-Quickbase-January-2022-Release-Notes',
 };
 
-const hrefs: Hrefs = {
+const hrefs = {
   ...socialLinks,
   ...documentationLinks,
 };
