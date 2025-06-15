@@ -1,18 +1,18 @@
 import { defineMessages } from 'react-intl';
 
-const messages = defineMessages({
+const linkMessages = defineMessages({
   github: {
-    id: 'github.description',
+    id: 'links.github',
     defaultMessage: 'GitHub',
   },
   linkedin: {
-    id: 'linkedin.description',
+    id: 'links.linkedin',
     defaultMessage: 'LinkedIn',
   },
   resume: {
-    id: 'resume.description',
+    id: 'links.resume',
     defaultMessage: 'Resume',
   },
 });
 
-export default messages;
+export default linkMessages;

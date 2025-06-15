@@ -1,11 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Column, Container, Row } from '../Layout';
-import { SectionId } from '../../constants/consts';
+import { SectionIds } from 'constants/consts';
+import Column from '../layout/column';
+import Container from '../layout/container';
+import Row from '../layout/row';
 
 export interface SectionProps {
   children?: React.ReactNode;
-  $sectionid: SectionId;
+  $sectionid: SectionIds;
   $role?: string;
   size?:
     | ''
@@ -28,7 +30,8 @@ export interface SectionProps {
 }
 
 export const FullWidthBackground = styled.div<SectionProps>`
-  background-color: ${({ theme, $sectionid }) => theme.colors.sections[$sectionid].backgroundColor};
+  background-color: ${({ theme, $sectionid }) =>
+    theme.colors.sections?.[$sectionid].backgroundColor};
   color: ${({ theme, $sectionid }) => theme.colors.sections[$sectionid].color};
   transition: ${({ theme, $sectionid }) => theme.colors.sections[$sectionid].transition};
 `;

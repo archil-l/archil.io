@@ -1,9 +1,9 @@
 import { defineMessages } from 'react-intl';
 
-const messages = defineMessages({
+const navMessages = defineMessages({
   welcome: {
     id: 'nav.welcome',
-    defaultMessage: `Home`,
+    defaultMessage: 'Home',
   },
   work: {
     id: 'nav.work',
@@ -15,4 +15,4 @@ const messages = defineMessages({
   },
 });
 
-export default messages;
+export default navMessages;

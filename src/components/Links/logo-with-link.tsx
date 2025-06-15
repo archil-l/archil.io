@@ -1,23 +1,22 @@
 import React from 'react';
 
-import { MessageDescriptor, useIntl } from 'react-intl';
-
 import { LogoWrapper } from './styles';
+import linkMessages from './messages';
+import { useIntl } from 'react-intl';
 
 type BrandedLinkProps = {
   Logo: React.FC;
   href: string;
-  message: MessageDescriptor;
+  label: 'github' | 'linkedin' | 'resume';
 };
 
-const LogoWithLink = ({ Logo, href, message }: BrandedLinkProps) => {
+const LogoWithLink = ({ Logo, href, label }: BrandedLinkProps) => {
   const { formatMessage } = useIntl();
-
   return (
-    <LogoWrapper aria-label={formatMessage(message)}>
+    <LogoWrapper aria-label={label}>
       <Logo />
       <a href={href} target="_blank" rel="noopener noreferrer">
-        <span>{formatMessage(message)}</span>
+        <span>{formatMessage(linkMessages[label])}</span>
       </a>
     </LogoWrapper>
   );

@@ -1,14 +1,13 @@
 import React from 'react';
 
-import ThemeToggle from '../ThemeToggle/ThemeToggle';
-import { Column, Container, Row } from '../Layout';
+import ThemeToggle from '../theme-toggle/theme-toggle';
+import Column from '../layout/column';
+import Container from '../layout/container';
+import Row from '../layout/row';
 import { StyledHeader } from './styles';
 
-import { SECTIONS } from '../../constants/consts';
-import messages from '../../contents/header';
-import Nav from '../Nav/Nav';
-
-const { WELCOME, WORK, PROJECTS } = SECTIONS;
+import Nav from '../nav/nav';
+import { SectionIds } from 'constants/consts';
 
 const Header = () => {
   return (
@@ -18,13 +17,13 @@ const Header = () => {
           <Column size="two">
             <ul className="navbar-list" role="navigation">
               <li className="navbar-item">
-                <Nav sectionId={WELCOME} title={messages.welcome} />
+                <Nav sectionId={SectionIds.Welcome} />
               </li>
               <li className="navbar-item">
-                <Nav sectionId={WORK} title={messages.work} />
+                <Nav sectionId={SectionIds.Work} />
               </li>
               <li className="navbar-item">
-                <Nav sectionId={PROJECTS} title={messages.projects} />
+                <Nav sectionId={SectionIds.Projects} />
               </li>
             </ul>
           </Column>

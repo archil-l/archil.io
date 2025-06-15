@@ -1,5 +1,5 @@
 import { createContext, type ReactNode } from 'react';
-import { useColorScheme, ColorSchemeType } from '../hooks/useColorScheme';
+import { useColorScheme, ColorSchemeType } from '../hooks/use-color-scheme';
 import { ThemeProvider } from 'styled-components';
 import { darkTheme, lightTheme } from '../themes/theme';
 

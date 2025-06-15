@@ -1,10 +1,10 @@
 {
-  "name": "archil.me",
+  "name": "archil.io",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "yarn copy-md && react-scripts start",
+    "build": "yarn copy-md && react-scripts build",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
@@ -14,9 +14,11 @@
     "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,css,md}'",
     "prepare": "husky",
     "predeploy": "yarn build",
-    "deploy": "gh-pages -d build --cname archil.io"
+    "deploy": "gh-pages -d build --cname archil.io",
+    "copy-md": "cpx \"src/content/*.md\" public/content/"
   },
   "dependencies": {
+    "markdown-to-jsx": "^7.7.6",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-intl": "6.5.5",
@@ -36,6 +38,7 @@
     "@types/react-dom": "^18.2.18",
     "@typescript-eslint/eslint-plugin": "^6.10.0",
     "@typescript-eslint/parser": "^6.10.0",
+    "cpx": "^1.5.0",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.1",

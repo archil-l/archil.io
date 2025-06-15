@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react';
 import { render } from '@testing-library/react';
 import { IntlProvider } from 'react-intl';
 import { ThemeProvider } from 'styled-components';
-import { ColorSchemeContext } from '../context/ColorSchemeContext';
+import { ColorSchemeContext } from '../context/color-scheme-context';
 import { lightTheme, darkTheme } from '../themes/theme';
 
 interface RenderWithProvidersProps {

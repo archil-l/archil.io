@@ -1,7 +1,7 @@
 import React from 'react';
 import { screen } from '@testing-library/react';
 import { renderWithProviders } from '../../../tests/test-utils';
-import Header from '../Header';
+import Header from '../header';
 import { darkTheme } from '../../../themes/theme';
 
 describe('Header', () => {

@@ -6,27 +6,6 @@ Boston MA, 02459 - [(781) 971-2807](tel:+17819712807) - [archil-nu@outlook.com](
 
 NU-trained front-end leaning software engineer with more than 3 years experience in React, JavaScript and Typescript. Have built go-to-market enterprise-focused web applications, web components and features using semantic HTML, adhering to web-accessibility standards (WCAG). Proficient in developing robust and user-friendly applications in React, with a strong focus on user experience and performance. Experience leading a small software engineering team to collaborate across the organization and deliver customer-facing product. A team player.
 
-### Teaching Experience
-
-#### Adjunct Faculty, Lead Teaching Assistant - Northeastern University College of Engineering, Boston, MA<span style="float:right;">Oct 2020 – May 2025</span>
-
-**INFO5001: Application Modeling and Design** ([Course Information](https://catalog.northeastern.edu/graduate/engineering/multidisciplinary/information-systems-msis-bridge/#programrequirementstext))
-
-Introductory core course focused on systematically combining business processes and complex data models to assemble user-friendly applications that meet business requirements. Emphasizes the object-oriented paradigm, Java programming, and productivity tools to build powerful business applications.
-
-- Conducted laboratory sessions and created lab recordings to guide students in applying object-oriented programming and modeling concepts using Java.
-- Prepared lab materials, shared assignments, and maintained course resources on the learning platform.
-- Reviewed student code, graded assignments and exams, and provided constructive feedback to support learning.
-- Coordinated with faculty and led a team of teaching assistants to ensure smooth course delivery and consistent grading.
-
-**INFO5100: Application Engineering and Development** ([Course Information](https://catalog.northeastern.edu/graduate/engineering/multidisciplinary/information-systems-msis-bridge/#programrequirementstext))
-
-Introductory core course focused on the principles and practices of application engineering and software development. Covers software design, development methodologies, and hands-on programming projects using Java and modern development tools.
-
-- Conducted lab sessions, prepared instructional materials, and created lab recordings to support student learning.
-- Assisted with assignment creation, code reviews, grading, and providing feedback to students.
-- Supported course delivery and collaborated with faculty and other teaching assistants.
-
 ### Professional Experience
 
 #### Frontend Engineer - Amazon Robotics, Sortation Insights Team - North Reading, MA<span style="float:right;">Jan 2025 - present</span>

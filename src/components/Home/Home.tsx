@@ -1,9 +1,9 @@
 import React from 'react';
-import { ColorSchemeContext } from '../../context/ColorSchemeContext';
+import { ColorSchemeContext } from '../../context/color-scheme-context';
 
-import Footer from '../Footer/Footer';
-import Main from './Main';
-import Header from '../Header/Header';
+import Footer from '../footer/footer';
+import Main from './main';
+import Header from '../header/header';
 
 const Home: React.FC = () => {
   const { appearance } = React.useContext(ColorSchemeContext);
