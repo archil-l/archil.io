@@ -1,7 +1,7 @@
 import React from 'react';
 import Section from '../section/section';
 import Divider from '../layout/divider';
-import { SectionIds } from 'constants/consts';
+import { SectionIds } from '../../constants/consts';
 
 const Main = () => {
   return (

@@ -7,7 +7,7 @@ import Row from '../layout/row';
 import { StyledHeader } from './styles';
 
 import Nav from '../nav/nav';
-import { SectionIds } from 'constants/consts';
+import { SectionIds } from '../../constants/consts';
 
 const Header = () => {
   return (

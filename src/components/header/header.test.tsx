@@ -1,8 +1,8 @@
 import React from 'react';
 import { screen } from '@testing-library/react';
-import { renderWithProviders } from '../../../tests/test-utils';
-import Header from '../header';
-import { darkTheme } from '../../../themes/theme';
+import Header from './header';
+import { darkTheme } from '../../themes/theme';
+import { renderWithProviders } from '@tests/test-utils';
 
 describe('Header', () => {
   const mockToggleTheme = jest.fn();

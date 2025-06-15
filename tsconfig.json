@@ -15,10 +15,10 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "baseUrl": "src",
+    "baseUrl": "./src",
     "paths": {
       "@*": ["*"],
-      "@/*": ["*"]
+      "@/*": ["./*"]
     },
     "types": ["node", "jest", "react", "react-dom"],
     "typeRoots": ["node_modules/@types"],
