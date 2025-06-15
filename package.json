@@ -13,7 +13,7 @@
     "lint:fix": "eslint 'src/**/*.{js,jsx,ts,tsx}' --fix",
     "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,css,md}'",
     "prepare": "husky",
-    "predeploy": "yarn build",
+    "predeploy": "yarn test && yarn build",
     "deploy": "gh-pages -d build --cname archil.io",
     "copy-md": "cpx \"src/content/*.md\" public/content/"
   },
