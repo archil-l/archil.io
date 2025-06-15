@@ -1,5 +1,0 @@
-# Navigation
-
-- Home
-- Work
-- Projects

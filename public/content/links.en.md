@@ -1,5 +1,0 @@
-# Links
-
-- GitHub
-- LinkedIn
-- Resume
