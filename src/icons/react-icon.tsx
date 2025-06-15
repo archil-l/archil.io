@@ -23,7 +23,7 @@ const LogoWrapper = styled.div``;
 const ReactIcon = () => {
   return (
     <LogoWrapper>
-      <ReactSvg role="presentation" aria-hidden="true" />
+      <ReactSvg role="presentation" aria-hidden="true" data-testid="react-icon" />
     </LogoWrapper>
   );
 };
