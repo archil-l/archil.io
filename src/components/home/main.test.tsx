@@ -14,14 +14,6 @@ jest.mock('../layout/divider', () => ({
   default: jest.fn(() => <div>Divider</div>),
 }));
 
-jest.mock('../../constants/consts', () => ({
-  SectionIds: {
-    Welcome: 'welcome',
-    Work: 'work',
-    Projects: 'projects',
-  },
-}));
-
 describe('Main', () => {
   it('renders Welcome section', () => {
     const { getByText } = render(<Main />);
