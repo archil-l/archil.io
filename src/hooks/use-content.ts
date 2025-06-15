@@ -6,7 +6,7 @@ interface UseContentResult {
   isError: boolean;
 }
 
-export function useContent(path: string | undefined): UseContentResult {
+export const useContent = (path: string | undefined): UseContentResult => {
   const [content, setContent] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
@@ -34,4 +34,4 @@ export function useContent(path: string | undefined): UseContentResult {
   }, [path]);
 
   return { content, isLoading, isError };
-}
+};

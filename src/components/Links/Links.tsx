@@ -6,26 +6,16 @@ import GitHub from '../../icons/github';
 import LinkedIn from '../../icons/linkedin';
 import Resume from '../../icons/resume';
 
-import hrefs from '../../content/hrefs';
+import { socialLinks } from '../../content/externalLinks';
 import { LinkContainer } from './styles';
 
-const LINK_LABELS = {
-  github: 'GitHub',
-  linkedin: 'LinkedIn',
-  resume: 'Resume',
-};
-
-const GitHubLink = () => (
-  <LogoWithLink Logo={GitHub} href={hrefs.github} label={LINK_LABELS.github} />
-);
+const GitHubLink = () => <LogoWithLink Logo={GitHub} href={socialLinks.github} label={'github'} />;
 
 const LinkedInLink = () => (
-  <LogoWithLink Logo={LinkedIn} href={hrefs.linkedin} label={LINK_LABELS.linkedin} />
+  <LogoWithLink Logo={LinkedIn} href={socialLinks.linkedin} label={'linkedin'} />
 );
 
-const ResumeLink = () => (
-  <LogoWithLink Logo={Resume} href={hrefs.resume} label={LINK_LABELS.resume} />
-);
+const ResumeLink = () => <LogoWithLink Logo={Resume} href={socialLinks.resume} label={'resume'} />;
 
 const Links = () => {
   return (

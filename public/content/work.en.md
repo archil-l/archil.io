@@ -1,12 +1,12 @@
-# Work 👨🏻‍💻
+<SectionHeader>Work 👨🏻‍💻</SectionHeader>
 
-I'm a Frontend Engineer II on the Sortation Planning team at Amazon Robotics. In my current role, I build scalable, reliable, and high-performance web applications to manage and monitor robotic equipment used for outbound dock automation. [(see Amazon Robotics)](https://your-robotics-link-here)
+I'm a Frontend Engineer II on the Sortation Planning team at Amazon Robotics. In my current role, I build scalable, reliable, and high-performance web applications to manage and monitor robotic equipment used for outbound dock automation [(see Amazon Robotics).](https://www.aboutamazon.com/news/operations/amazon-robotics-robots-fulfillment-center)
 
 I previously worked at the enterprise SaaS platform Quickbase, where I joined as a Software Engineering Co-op and advanced to the role of Software Engineer II. I spent most of my time on a UI infrastructure team, building new features, reusable components, and contributing to Quickbase’s design system library. I also did significant work on web accessibility testing and improvements, both within my own projects and in collaboration with other teams. I worked primarily in React, using TypeScript and JavaScript, and I’m comfortable with tools in this domain, including those used for performance profiling and accessibility testing. Below are some of the key features I contributed to:
 
 ---
 
-## Quickbase's Navigation ([Release Notes](https://your-new-nav-link-here))
+### Quickbase's Navigation ([Release Notes](https://helpv2.quickbase.com/hc/en-us/articles/30212936236948-Quickbase-September-2024-Release-Notes#h_01J7BD3PQ33X5HVGPX3SEJSCM8))
 
 ![New Navigation](https://helpv2.quickbase.com/hc/article_attachments/30267023632788)
 
@@ -17,7 +17,7 @@ Rolled out in 2024, Quickbase's navigation has been rebuilt from the ground up t
 
 ---
 
-## Quickbase's Summary Report ([Release Notes](https://your-summary-report-link-here))
+### Quickbase's Summary Report ([Release Notes](https://helpv2.quickbase.com/hc/en-us/articles/23804944584468-Quickbase-February-2024-Release-Notes#h_01HPT7ASHWVSMB064ADPVMTR80))
 
 ![New Summary Report](https://assets.marketing.quickbase.com/product/Screenshots/_1320x935_crop_center-center_82_line/product-screenshots-reporting-and-dashboards-visualizations.png.webp)
 
@@ -30,7 +30,7 @@ New enhanced summary reports offered streamlined navigation, making it easier th
 
 ---
 
-## Quickbase's Forms Experience ([Release Notes](https://your-forms-experience-link-here))
+### Quickbase's Forms Experience ([Release Notes](https://helpv2.quickbase.com/hc/en-us/articles/16259648646292-Quickbase-June-2023-release-notes#h_01GAH1YHWP30JQ63J1ZCZ74YCN))
 
 ![New Forms Experience](https://helpv2.quickbase.com/hc/article_attachments/27269565298196)
 
@@ -43,7 +43,7 @@ New forms were released in 2023 and offered form builders a drag-and-drop WYSIWY
 
 ---
 
-## Quickbase's Calendar Dashboard Widget ([Release Notes](https://your-dashboard-widget-link-here))
+### Quickbase's Calendar Dashboard Widget ([Release Notes](https://helpv2.quickbase.com/hc/en-us/articles/4418012983828-Quickbase-January-2022-Release-Notes))
 
 ![New Dashboard Widget](https://helpv2.quickbase.com/hc/article_attachments/4522850223380/jan.image.1.png)
 

@@ -9,12 +9,6 @@ import { StyledHeader } from './styles';
 import Nav from '../nav/nav';
 import { SectionIds } from 'constants/consts';
 
-const NavLabels = {
-  [SectionIds.Welcome]: 'Home',
-  [SectionIds.Work]: 'Work',
-  [SectionIds.Projects]: 'Projects',
-};
-
 const Header = () => {
   return (
     <StyledHeader>
@@ -23,13 +17,13 @@ const Header = () => {
           <Column size="two">
             <ul className="navbar-list" role="navigation">
               <li className="navbar-item">
-                <Nav sectionId={SectionIds.Welcome} title={NavLabels[SectionIds.Welcome]} />
+                <Nav sectionId={SectionIds.Welcome} />
               </li>
               <li className="navbar-item">
-                <Nav sectionId={SectionIds.Work} title={NavLabels[SectionIds.Work]} />
+                <Nav sectionId={SectionIds.Work} />
               </li>
               <li className="navbar-item">
-                <Nav sectionId={SectionIds.Projects} title={NavLabels[SectionIds.Projects]} />
+                <Nav sectionId={SectionIds.Projects} />
               </li>
             </ul>
           </Column>
