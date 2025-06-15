@@ -1,5 +1,5 @@
 import React from 'react';
-import { getAllByText, render } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import Main from './main';
 import { SectionProps } from '@components/section/section-wrapper';
 
