@@ -1,21 +1,16 @@
 import React from 'react';
-
-import Welcome from '../Sections/Welcome';
-import Work from '../Sections/Work';
-import Divider from '../Layout/Divider';
-import { SECTIONS } from '../../constants/consts';
-import Projects from '../Sections/Projects';
-
-const { WELCOME, WORK, PROJECTS } = SECTIONS;
+import Section from '../section/section';
+import Divider from '../layout/divider';
+import { SectionIds } from 'constants/consts';
 
 const Main = () => {
   return (
     <React.Fragment>
-      <Welcome $sectionid={WELCOME} $role="main" />
+      <Section $sectionid={SectionIds.Welcome} $role="main" />
       <Divider />
-      <Work $sectionid={WORK} size="twelve" />
+      <Section $sectionid={SectionIds.Work} size="twelve" />
       <Divider />
-      <Projects $sectionid={PROJECTS} size="twelve" />
+      <Section $sectionid={SectionIds.Projects} size="twelve" />
     </React.Fragment>
   );
 };

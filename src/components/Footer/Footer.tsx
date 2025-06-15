@@ -1,7 +1,7 @@
 import React from 'react';
-import { Container, Row, Column } from '../Layout';
-import { StyledFooter } from './styles';
 import ReactIcon from '../../icons/ReactIcon';
+import { Container, Row, Column } from '@components/layout';
+import { StyledFooter } from './styles';
 
 const Footer = () => {
   return (

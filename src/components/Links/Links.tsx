@@ -1,25 +1,30 @@
 import React from 'react';
 
-import LogoWithLink from './LogoWithLink';
+import LogoWithLink from './logo-with-link';
 
-import GitHub from '../../icons/GitHub';
-import LinkedIn from '../../icons/LinkedIn';
-import Resume from '../../icons/Resume';
+import GitHub from '../../icons/github';
+import LinkedIn from '../../icons/linkedin';
+import Resume from '../../icons/resume';
 
 import hrefs from '../../contents/hrefs';
-import messages from '../../contents/links';
 import { LinkContainer } from './styles';
 
+const LINK_LABELS = {
+  github: 'GitHub',
+  linkedin: 'LinkedIn',
+  resume: 'Resume',
+};
+
 const GitHubLink = () => (
-  <LogoWithLink Logo={GitHub} href={hrefs.github} message={messages.github} />
+  <LogoWithLink Logo={GitHub} href={hrefs.github} label={LINK_LABELS.github} />
 );
 
 const LinkedInLink = () => (
-  <LogoWithLink Logo={LinkedIn} href={hrefs.linkedin} message={messages.linkedin} />
+  <LogoWithLink Logo={LinkedIn} href={hrefs.linkedin} label={LINK_LABELS.linkedin} />
 );
 
 const ResumeLink = () => (
-  <LogoWithLink Logo={Resume} href={hrefs.resume} message={messages.resume} />
+  <LogoWithLink Logo={Resume} href={hrefs.resume} label={LINK_LABELS.resume} />
 );
 
 const Links = () => {

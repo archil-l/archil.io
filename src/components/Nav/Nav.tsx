@@ -1,14 +1,11 @@
 import React from 'react';
-import { MessageDescriptor, useIntl } from 'react-intl';
 
 interface NavProps {
   sectionId: string;
-  title: MessageDescriptor;
+  title: string;
 }
 
 const Nav = ({ sectionId, title }: NavProps) => {
-  const { formatMessage } = useIntl();
-
   const handleNavigate = () => {
     const section = document.getElementById(sectionId);
     section && section.scrollIntoView({ behavior: 'smooth' });
@@ -16,7 +13,7 @@ const Nav = ({ sectionId, title }: NavProps) => {
 
   return (
     <button className="nav-button" onClick={handleNavigate}>
-      {formatMessage(title)}
+      {title}
     </button>
   );
 };

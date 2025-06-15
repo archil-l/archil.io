@@ -2,7 +2,7 @@ import React from 'react';
 import Switch from 'react-switch';
 import { useIntl } from 'react-intl';
 
-import { ColorSchemeContext } from '../../context/ColorSchemeContext';
+import { ColorSchemeContext } from '../../context/color-scheme-context';
 
 import Moon from './Moon';
 import Sun from './Sun';

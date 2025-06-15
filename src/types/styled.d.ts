@@ -1,3 +1,4 @@
+import { SectionIds } from 'constants/consts';
 import 'styled-components';
 
 interface SectionTheme {
@@ -34,12 +35,7 @@ declare module 'styled-components' {
         buttonBackground: string;
         buttonText: string;
       };
-      sections: {
-        welcome: SectionTheme;
-        work: SectionTheme;
-        projects: SectionTheme;
-        contact: SectionTheme;
-      };
+      sections: Record<SectionIds, SectionTheme>;
     };
   }
 }
