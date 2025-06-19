@@ -34,9 +34,10 @@ const Section = ({ $sectionid, $role, size }: SectionProps) => {
                       float: 'right',
                       display: 'block',
                       margin: '10px',
-                      boxShadow: 'rgba(0, 0, 0, 0.1) 0px 0px 10px',
+                      boxShadow: 'rgba(0, 0, 0, 0.3) 0px 0px 10px',
                       width: '350px',
                       maxWidth: '100%',
+                      borderRadius: '5px',
                     }}
                   />
                 ),
