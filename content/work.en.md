@@ -1,8 +1,12 @@
 <SectionHeader>Work 👨🏻‍💻</SectionHeader>
 
-I'm a Frontend Engineer II on the Sortation Planning team at Amazon Robotics. In my current role, I build scalable, reliable, and high-performance web applications to manage and monitor robotic equipment used for outbound dock automation [(see Amazon Robotics).](https://www.aboutamazon.com/news/operations/amazon-robotics-robots-fulfillment-center)
+![Sortation at Amazon Robotics](https://assets.aboutamazon.com/dims4/default/c90ddd3/2147483647/strip/true/crop/1600x900+0+0/resize/1320x743!/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2Ff8%2F1b%2F29a9dcae4fe489b02d520132c0b6%2Fabout-amazon-inline-inline008-amazon-deliveringthefuture-robotics-amazon-mqy1-091124-ls-225-copy-6458x3632.jpg)
 
-I previously worked at the enterprise SaaS platform Quickbase, where I joined as a Software Engineering Co-op and advanced to the role of Software Engineer II. I spent most of my time on a UI infrastructure team, building new features, reusable components, and contributing to Quickbase’s design system library. I also did significant work on web accessibility testing and improvements, both within my own projects and in collaboration with other teams. I worked primarily in React, using TypeScript and JavaScript, and I’m comfortable with tools in this domain, including those used for performance profiling and accessibility testing. Below are some of the key features I contributed to:
+I'm **Frontend Engineer II** on the 📦 Sortation Insights team at [Amazon Robotics](https://www.aboutamazon.com/news/operations/amazon-robotics-robots-fulfillment-center). In this role, I build scalable, reliable, and high-performance web applications that manage and monitor robotic systems used in outbound dock automation. My team builds advanced tools aimed at optimizing Overall Equipment Effectiveness (OEE) across robotic sortation processes.
+
+---
+
+I previously worked at the enterprise SaaS platform [Quickbase](https://www.quickbase.com), where I joined as a Software Engineering Co-op and advanced to the role of Software Engineer II. I spent most of my time on a UI infrastructure team, building new features, reusable components, and contributing to Quickbase’s design system library. I also did significant work on web accessibility testing and improvements, both within my own projects and in collaboration with other teams. I worked primarily in React, using TypeScript and JavaScript, and I’m comfortable with tools in this domain, including those used for performance profiling and accessibility testing. Below are some of the key features I contributed to:
 
 ---
 
