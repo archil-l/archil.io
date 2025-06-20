@@ -1,18 +1,18 @@
-import React from 'react';
-import Section from '../section/section';
-import Divider from '../layout/divider';
+import React, { Fragment } from 'react';
+import Section from '../../components/section/section';
+import Divider from '../../components/layout/divider';
 import { SectionIds } from '../../constants/consts';
 
-const Main = () => {
+const Home = (): JSX.Element => {
   return (
-    <React.Fragment>
+    <Fragment>
       <Section $sectionid={SectionIds.Welcome} $role="main" />
       <Divider />
       <Section $sectionid={SectionIds.Work} size="twelve" />
       <Divider />
       <Section $sectionid={SectionIds.Projects} size="twelve" />
-    </React.Fragment>
+    </Fragment>
   );
 };
 
-export default Main;
+export default Home;

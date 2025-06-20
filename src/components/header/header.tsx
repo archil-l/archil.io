@@ -9,22 +9,22 @@ import { StyledHeader } from './styles';
 import Nav from '../nav/nav';
 import { SectionIds } from '../../constants/consts';
 
-const Header = () => {
+type HeaderProps = {
+  navList?: { sectionId: SectionIds; label: string }[];
+};
+
+const Header = ({ navList }: HeaderProps) => {
   return (
     <StyledHeader>
       <Container>
         <Row>
           <Column size="two">
             <ul className="navbar-list" role="navigation">
-              <li className="navbar-item">
-                <Nav sectionId={SectionIds.Welcome} />
-              </li>
-              <li className="navbar-item">
-                <Nav sectionId={SectionIds.Work} />
-              </li>
-              <li className="navbar-item">
-                <Nav sectionId={SectionIds.Projects} />
-              </li>
+              {navList?.map(navItem => (
+                <li className="navbar-item" key={navItem.sectionId}>
+                  <Nav sectionId={navItem.sectionId} />
+                </li>
+              ))}
             </ul>
           </Column>
           <Column size="one" className="toggle-container">

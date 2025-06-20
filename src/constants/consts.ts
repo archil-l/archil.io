@@ -3,4 +3,5 @@ export enum SectionIds {
   Work = 'work',
   Projects = 'projects',
   Contact = 'contact',
+  Teaching = 'teaching',
 }
