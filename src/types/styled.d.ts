@@ -1,4 +1,4 @@
-import { SectionIds } from 'constants/consts';
+import { sectionIds } from 'constants/consts';
 import 'styled-components';
 
 interface SectionTheme {
@@ -35,7 +35,7 @@ declare module 'styled-components' {
         buttonBackground: string;
         buttonText: string;
       };
-      sections: Record<SectionIds, SectionTheme>;
+      sections: Record<sectionIds, SectionTheme>;
     };
   }
 }

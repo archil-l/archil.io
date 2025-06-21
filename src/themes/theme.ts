@@ -44,6 +44,11 @@ export const lightTheme: DefaultTheme = {
         color: '#343a40',
         transition: 'background-color 2s ease',
       },
+      teaching: {
+        backgroundColor: '#f8f9fa',
+        color: '#343a40',
+        transition: 'background-color 2s ease',
+      },
       contact: {
         backgroundColor: '#f8f9fa',
         color: '#343a40',
@@ -92,6 +97,11 @@ export const darkTheme: DefaultTheme = {
         transition: 'background-color 2s ease',
       },
       projects: {
+        backgroundColor: '#343a40',
+        color: '#f8f9fa',
+        transition: 'background-color 2s ease',
+      },
+      teaching: {
         backgroundColor: '#343a40',
         color: '#f8f9fa',
         transition: 'background-color 2s ease',

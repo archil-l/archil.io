@@ -1,4 +1,4 @@
-<SectionHeader>Work 👨🏻‍💻</SectionHeader>
+<SectionHeader sectionId="work">Work 👨🏻‍💻</SectionHeader>
 
 ![Sortation at Amazon Robotics](https://assets.aboutamazon.com/dims4/default/c90ddd3/2147483647/strip/true/crop/1600x900+0+0/resize/1320x743!/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2Ff8%2F1b%2F29a9dcae4fe489b02d520132c0b6%2Fabout-amazon-inline-inline008-amazon-deliveringthefuture-robotics-amazon-mqy1-091124-ls-225-copy-6458x3632.jpg)
 
@@ -38,7 +38,7 @@ New enhanced summary reports offered streamlined navigation, making it easier th
 
 ![New Forms Experience](https://helpv2.quickbase.com/hc/article_attachments/27269565298196)
 
-New forms were released in 2023 and offered form builders a drag-and-drop WYSIWYG experience when designing forms. I personally built and refined more than dozen field components and embeded existing reports into the new form experience. These are my contributions:
+New forms were released in 2023 and offered form builders a drag-and-drop WYSIWYG experience when designing forms. I personally built and refined more than dozen field components and embedded existing reports into the new form experience. These are my contributions:
 
 - Built and improved 10+ field components for the new forms. Dealt with numbers, decimals, strings, dates as well as more complex types like users and file attachments;
 - Developed reusable components across several internal libraries;

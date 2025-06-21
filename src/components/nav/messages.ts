@@ -13,6 +13,14 @@ const navMessages = defineMessages({
     id: 'nav.projects',
     defaultMessage: 'Projects',
   },
+  contact: {
+    id: 'nav.contact',
+    defaultMessage: 'Contact',
+  },
+  teaching: {
+    id: 'nav.teaching',
+    defaultMessage: 'Teaching',
+  },
 });
 
 export default navMessages;

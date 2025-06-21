@@ -1,12 +1,13 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import Main from './main';
-import { SectionProps } from '@components/section/section-wrapper';
+
+import Home from './home';
+import { SectionProps } from '../../components/section/section-wrapper';
 
 // Mock child components
 jest.mock('../section/section', () => ({
   __esModule: true,
-  default: jest.fn(({ $sectionid }: SectionProps) => <div>Section {$sectionid}</div>),
+  default: jest.fn(({ sectionId }: SectionProps) => <div>Section {sectionId}</div>),
 }));
 
 jest.mock('../layout/divider', () => ({
@@ -14,27 +15,27 @@ jest.mock('../layout/divider', () => ({
   default: jest.fn(() => <div>Divider</div>),
 }));
 
-describe('Main', () => {
+describe('Home', () => {
   it('renders Welcome section', () => {
-    const { getByText } = render(<Main />);
+    const { getByText } = render(<Home />);
 
     expect(getByText('Section welcome')).toBeInTheDocument();
   });
 
   it('renders Work section', () => {
-    const { getByText } = render(<Main />);
+    const { getByText } = render(<Home />);
 
     expect(getByText('Section work')).toBeInTheDocument();
   });
 
   it('renders Projects section', () => {
-    const { getByText } = render(<Main />);
+    const { getByText } = render(<Home />);
 
     expect(getByText('Section projects')).toBeInTheDocument();
   });
 
   it('renders all dividers', () => {
-    const { getAllByText } = render(<Main />);
+    const { getAllByText } = render(<Home />);
 
     const dividers = getAllByText('Divider');
     expect(dividers.length).toEqual(2);

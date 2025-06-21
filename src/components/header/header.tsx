@@ -7,24 +7,30 @@ import Row from '../layout/row';
 import { StyledHeader } from './styles';
 
 import Nav from '../nav/nav';
-import { SectionIds } from '../../constants/consts';
+import { PageIds, sectionIds } from '../../constants/consts';
 
-const Header = () => {
+export type NavItem = {
+  label: string;
+  path: `/${PageIds}`;
+  section: sectionIds;
+};
+
+type HeaderProps = {
+  navList?: NavItem[];
+};
+
+const Header = ({ navList }: HeaderProps) => {
   return (
     <StyledHeader>
       <Container>
         <Row>
           <Column size="two">
             <ul className="navbar-list" role="navigation">
-              <li className="navbar-item">
-                <Nav sectionId={SectionIds.Welcome} />
-              </li>
-              <li className="navbar-item">
-                <Nav sectionId={SectionIds.Work} />
-              </li>
-              <li className="navbar-item">
-                <Nav sectionId={SectionIds.Projects} />
-              </li>
+              {navList?.map(navItem => (
+                <li className="navbar-item" key={navItem.section}>
+                  <Nav {...{ navItem }} />
+                </li>
+              ))}
             </ul>
           </Column>
           <Column size="one" className="toggle-container">
