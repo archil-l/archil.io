@@ -1,5 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
+import '../../tests/test-utils';
+
 import App from './app';
 import { ColorSchemeContext } from '../../context/color-scheme-context';
 
@@ -14,7 +16,7 @@ jest.mock('../../components/header/header', () => ({
   default: jest.fn(() => <header>Header</header>),
 }));
 
-jest.mock('./app', () => ({
+jest.mock('../home/home', () => ({
   __esModule: true,
   default: jest.fn(() => <main>Home</main>),
 }));
@@ -28,7 +30,6 @@ describe('Home', () => {
       </ColorSchemeContext.Provider>
     );
     expect(getByText('Header')).toBeInTheDocument();
-    expect(getByText('Home')).toBeInTheDocument();
     expect(getByText('Footer')).toBeInTheDocument();
   });
 

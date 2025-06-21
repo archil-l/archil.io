@@ -2,7 +2,7 @@ import React, { Fragment, HTMLAttributes } from 'react';
 import Section from '../../components/section/section';
 import Divider from '../../components/layout/divider';
 import { sectionIds } from '../../constants/consts';
-import Links from 'components/links/links';
+import Links from '../../components/links/links';
 
 const homeMarkdownComponents = {
   img: {

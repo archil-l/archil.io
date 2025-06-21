@@ -5,6 +5,13 @@ import { ThemeProvider } from 'styled-components';
 import { ColorSchemeContext } from '../context/color-scheme-context';
 import { lightTheme, darkTheme } from '../themes/theme';
 
+jest.mock('react-router', () => ({
+  __esModule: true,
+  BrowserRouter: ({ children }: { children: ReactNode }) => <div>{children}</div>,
+  Route: ({ children }: { children: ReactNode }) => <div>{children}</div>,
+  Routes: ({ children }: { children: ReactNode }) => <div>{children}</div>,
+  useNavigate: () => jest.fn(),
+}));
 interface RenderWithProvidersProps {
   children: ReactNode;
   appearance?: 'light' | 'dark';

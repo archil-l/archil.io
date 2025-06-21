@@ -3,14 +3,15 @@ import { render } from '@testing-library/react';
 
 import Home from './home';
 import { SectionProps } from '../../components/section/section-wrapper';
+import '../../tests/test-utils';
 
 // Mock child components
-jest.mock('../section/section', () => ({
+jest.mock('../../components/section/section', () => ({
   __esModule: true,
   default: jest.fn(({ sectionId }: SectionProps) => <div>Section {sectionId}</div>),
 }));
 
-jest.mock('../layout/divider', () => ({
+jest.mock('../../components/layout/divider', () => ({
   __esModule: true,
   default: jest.fn(() => <div>Divider</div>),
 }));
