@@ -1,4 +1,4 @@
-<SiteHeader>Welcome! 🖖🏻</SiteHeader>
+<SiteHeader sectionId="welcome">Welcome! 🖖🏻</SiteHeader>
 
 My name is Archil Lelashvili, I am a software engineer building dynamic, semantic, accessible, and user-friendly web applications.
 

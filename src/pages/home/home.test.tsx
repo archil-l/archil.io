@@ -7,7 +7,7 @@ import { SectionProps } from '../../components/section/section-wrapper';
 // Mock child components
 jest.mock('../section/section', () => ({
   __esModule: true,
-  default: jest.fn(({ $sectionid }: SectionProps) => <div>Section {$sectionid}</div>),
+  default: jest.fn(({ sectionId }: SectionProps) => <div>Section {sectionId}</div>),
 }));
 
 jest.mock('../layout/divider', () => ({

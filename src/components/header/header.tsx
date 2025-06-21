@@ -7,10 +7,16 @@ import Row from '../layout/row';
 import { StyledHeader } from './styles';
 
 import Nav from '../nav/nav';
-import { SectionIds } from '../../constants/consts';
+import { PageIds, sectionIds } from '../../constants/consts';
+
+export type NavItem = {
+  label: string;
+  path: `/${PageIds}`;
+  section: sectionIds;
+};
 
 type HeaderProps = {
-  navList?: { sectionId: SectionIds; label: string }[];
+  navList?: NavItem[];
 };
 
 const Header = ({ navList }: HeaderProps) => {
@@ -21,8 +27,8 @@ const Header = ({ navList }: HeaderProps) => {
           <Column size="two">
             <ul className="navbar-list" role="navigation">
               {navList?.map(navItem => (
-                <li className="navbar-item" key={navItem.sectionId}>
-                  <Nav sectionId={navItem.sectionId} />
+                <li className="navbar-item" key={navItem.section}>
+                  <Nav {...{ navItem }} />
                 </li>
               ))}
             </ul>
