@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
-import { useAIAgent } from 'hooks/use-ai-agent';
-import { useAuthCookie } from 'hooks/use-auth';
+import { useAIAgent } from '../../hooks/use-ai-agent';
+import { useAuthCookie } from '../../hooks/use-auth';
 
 const Agent = (): JSX.Element => {
   useAuthCookie();
