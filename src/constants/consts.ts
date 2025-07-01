@@ -9,4 +9,5 @@ export enum sectionIds {
 export enum PageIds {
   Home = 'home',
   Teaching = 'teaching',
+  Agent = 'agent',
 }

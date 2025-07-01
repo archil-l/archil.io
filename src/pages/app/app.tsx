@@ -6,6 +6,7 @@ import Header, { NavItem } from '../../components/header/header';
 import { Route, Routes } from 'react-router';
 import Home from '../home/home';
 import Teaching from '../teaching/teaching';
+import Agent from '../agent/agent';
 import { PageIds, sectionIds } from '../../constants/consts';
 
 const App: React.FC = () => {
@@ -29,6 +30,7 @@ const App: React.FC = () => {
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
         <Route path="/teaching" element={<Teaching />} />
+        <Route path="/agent" element={<Agent />} />
         <Route path="/content/*" element={<div>Error</div>} />
       </Routes>
       <Footer />
