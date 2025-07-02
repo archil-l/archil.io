@@ -1,4 +1,4 @@
-import { useCallback } from 'react';
+import { useCallback, useState } from 'react';
 
 /**
  * Custom hook to make requests to Agentic AI and log the response to the console.
@@ -6,27 +6,42 @@ import { useCallback } from 'react';
  * @returns {function} sendRequest - function to send a request to the AI agent
  */
 
-const AGENTIC_AI_ENDPOINT = 'https://1vkkuqlk8h.execute-api.us-east-1.amazonaws.com/prod/';
+type UseAIAgentProps = {
+  isAuthenticated?: boolean;
+};
 
-export const useAIAgent = () => {
-  const sendRequest = useCallback(async (payload: unknown) => {
-    try {
-      const response = await fetch(AGENTIC_AI_ENDPOINT, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(payload),
-        credentials: 'include',
-      });
-      const data = await response.json();
-      console.log('Agentic AI response:', data);
-      return data;
-    } catch (error) {
-      console.error('Agentic AI request error:', error);
-      throw error;
-    }
-  }, []);
+export const AGENT_ENDPOINT = 'https://d1hmz7iun38izq.cloudfront.net';
 
-  return { sendRequest };
+export const useAIAgent = ({ isAuthenticated = false }: UseAIAgentProps) => {
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<Error | null>(null);
+
+  const sendRequest = useCallback(
+    async (payload: unknown) => {
+      if (!isAuthenticated) {
+        return;
+      }
+      setLoading(true);
+      setError(null);
+      try {
+        const response = await fetch(AGENT_ENDPOINT, {
+          method: 'POST',
+          credentials: 'include',
+          body: JSON.stringify(payload),
+        });
+        const data = await response.json();
+        console.log('Agent response:', data);
+        setLoading(false);
+        return data;
+      } catch (error) {
+        setLoading(false);
+        setError(error as Error);
+        console.error('Agent request error:', error);
+        throw error;
+      }
+    },
+    [isAuthenticated]
+  );
+
+  return { sendRequest, loading, error };
 };

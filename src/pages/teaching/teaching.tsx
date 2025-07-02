@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import Section from '../../components/section/section';
+import SectionWithMarkdown from '../../components/section/section-with-markdown';
 import Divider from '../../components/layout/divider';
 import { sectionIds } from '../../constants/consts';
 
@@ -19,7 +19,7 @@ const teachingMarkdownComponents = {
 const Teaching = (): JSX.Element => {
   return (
     <Fragment>
-      <Section
+      <SectionWithMarkdown
         sectionId={sectionIds.Teaching}
         $role="main"
         markdownOverrides={teachingMarkdownComponents}

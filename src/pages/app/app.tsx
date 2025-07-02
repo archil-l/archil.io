@@ -17,10 +17,10 @@ const App: React.FC = () => {
   }, [appearance]);
 
   const navList: NavItem[] = [
-    { label: 'Home', path: `/${PageIds.Home}`, section: sectionIds.Welcome },
-    { label: 'Work', path: `/${PageIds.Home}`, section: sectionIds.Work },
-    { label: 'Projects', path: `/${PageIds.Home}`, section: sectionIds.Projects },
-    { label: 'Teaching', path: `/${PageIds.Teaching}`, section: sectionIds.Teaching },
+    { section: sectionIds.Welcome, path: `/${PageIds.Home}` },
+    { section: sectionIds.Work, path: `/${PageIds.Home}` },
+    { section: sectionIds.Projects, path: `/${PageIds.Home}` },
+    { section: sectionIds.Teaching, path: `/${PageIds.Teaching}` },
   ];
 
   return (

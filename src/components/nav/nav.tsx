@@ -12,6 +12,14 @@ interface NavProps {
 
 const Nav = ({ navItem }: NavProps) => {
   const { formatMessage } = useIntl();
+  const label =
+    navItem?.label ||
+    formatMessage(
+      navMessages[
+        `${navItem.section || sectionIds.Welcome}`.toLowerCase() as keyof typeof navMessages
+      ]
+    );
+
   const navigate = useNavigate();
 
   const handleNavigate = () => {
@@ -25,12 +33,11 @@ const Nav = ({ navItem }: NavProps) => {
     section && section.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const labelKey =
-    `${navItem.section || sectionIds.Welcome}`.toLowerCase() as keyof typeof navMessages;
+  `${navItem.section || sectionIds.Welcome}`.toLowerCase() as keyof typeof navMessages;
 
   return (
     <button className="nav-button" onClick={handleNavigate}>
-      {formatMessage(navMessages[labelKey])}
+      {label}
     </button>
   );
 };

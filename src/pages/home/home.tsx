@@ -1,5 +1,5 @@
 import React, { Fragment, HTMLAttributes } from 'react';
-import Section from '../../components/section/section';
+import SectionWithMarkdown from '../../components/section/section-with-markdown';
 import Divider from '../../components/layout/divider';
 import { sectionIds } from '../../constants/consts';
 import Links from '../../components/links/links';
@@ -39,19 +39,19 @@ const homeMarkdownComponents = {
 const Home = (): JSX.Element => {
   return (
     <Fragment>
-      <Section
+      <SectionWithMarkdown
         sectionId={sectionIds.Welcome}
         $role="main"
         markdownOverrides={homeMarkdownComponents}
       />
       <Divider />
-      <Section
+      <SectionWithMarkdown
         sectionId={sectionIds.Work}
         size="twelve"
         markdownOverrides={homeMarkdownComponents}
       />
       <Divider />
-      <Section
+      <SectionWithMarkdown
         sectionId={sectionIds.Projects}
         size="twelve"
         markdownOverrides={homeMarkdownComponents}
