@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
+import { AGENT_ENDPOINT } from './use-ai-agent';
 
-const AUTH_URL = 'https://dqniveqd37.execute-api.us-east-1.amazonaws.com/prod/sign-cookie';
+const AUTH_URL = `${AGENT_ENDPOINT}/sign-cookie`;
 
 export function useAuthCookie() {
   const [loading, setLoading] = useState(true);

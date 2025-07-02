@@ -2,6 +2,7 @@
   "name": "archil.io",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://archil.io",
   "scripts": {
     "start": "yarn copy-md && react-scripts start",
     "build": "yarn copy-md && react-scripts build",

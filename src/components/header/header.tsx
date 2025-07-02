@@ -10,9 +10,8 @@ import Nav from '../nav/nav';
 import { PageIds, sectionIds } from '../../constants/consts';
 
 export type NavItem = {
-  label: string;
-  path: `/${PageIds}`;
   section: sectionIds;
+  path: `/${PageIds}`;
 };
 
 type HeaderProps = {

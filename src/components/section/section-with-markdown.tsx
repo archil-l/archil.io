@@ -8,7 +8,7 @@ import { getContentPath } from '../../utils/content-utils';
 import SectionWrapper, { SectionProps } from './section-wrapper';
 import Markdown from 'markdown-to-jsx';
 
-const Section = ({ sectionId, $role, markdownOverrides, size }: SectionProps) => {
+const SectionWithMarkdown = ({ sectionId, $role, markdownOverrides, size }: SectionProps) => {
   const { locale } = useIntl();
   const path = getContentPath({ filename: sectionId.toLowerCase(), lang: locale });
   const { content, isLoading, isError } = useContent(path);
@@ -34,4 +34,4 @@ const Section = ({ sectionId, $role, markdownOverrides, size }: SectionProps) =>
   );
 };
 
-export default Section;
+export default SectionWithMarkdown;

@@ -26,4 +26,17 @@ export const StyledFooter = styled.footer`
       margin-top: 8px;
     }
   }
+
+  button.nav-button {
+    border: none;
+    margin: 0;
+    padding: 0 20px 0 20px;
+    color: ${({ theme }) => theme.colors.header.color};
+    transition: color 1s;
+
+    &:hover {
+      color: ${({ theme }) => theme.colors.primary};
+      transition: color 1s;
+    }
+  }
 `;

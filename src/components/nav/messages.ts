@@ -21,6 +21,10 @@ const navMessages = defineMessages({
     id: 'nav.teaching',
     defaultMessage: 'Teaching',
   },
+  agent: {
+    id: 'nav.agent',
+    defaultMessage: '🤖',
+  },
 });
 
 export default navMessages;

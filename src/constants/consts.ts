@@ -4,6 +4,7 @@ export enum sectionIds {
   Projects = 'projects',
   Contact = 'contact',
   Teaching = 'teaching',
+  Agent = 'agent',
 }
 
 export enum PageIds {

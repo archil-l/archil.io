@@ -12,7 +12,7 @@ root.render(
   <React.StrictMode>
     <IntlProvider messages={{}} locale="en" defaultLocale="en" textComponent={React.Fragment}>
       <ColorSchemeProvider>
-        <BrowserRouter>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
           <App />
         </BrowserRouter>
       </ColorSchemeProvider>
