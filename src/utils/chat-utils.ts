@@ -19,7 +19,7 @@ export function formatChatMessages(messages: ChatMessage[]): string {
     .sort((a, b) => a.timestamp - b.timestamp)
     .map(msg => {
       const time = formatShortTime(msg.timestamp);
-      const formattedMsg = `<sub>${time}</sub>\n<strong>${msg.user.name}</strong>: ${msg.content}`;
+      const formattedMsg = `<strong>${msg.user.name}</strong><sub>${time}</sub>\n${msg.content}`;
       const className = msg.user.id === 'assistant' ? 'left-bubble' : 'right-bubble';
       return `<div class="${className}">${formattedMsg}</div>`;
     })

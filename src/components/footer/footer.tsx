@@ -18,6 +18,7 @@ const Footer = () => {
           <Column size="six" className="footer-logo">
             <Nav
               navItem={{
+                label: '🤖',
                 path: '/agent',
                 section: sectionIds.Agent,
               }}

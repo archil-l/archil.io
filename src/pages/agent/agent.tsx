@@ -1,18 +1,34 @@
 import React, { useState } from 'react';
 import { useAIAgent } from '../../hooks/use-ai-agent';
 import { useAuthCookie } from '../../hooks/use-auth';
-import { useChat } from '../../hooks/use-chat';
+import { ASSISTANT_USER, useChat } from '../../hooks/use-chat';
 import { UsernameInput } from '../../components/username-input/username-input';
 import { ChatHistory } from '../../components/chat/chat-history';
-import SectionWrapper from '../../components/section/section-wrapper';
 import { sectionIds } from '../../constants/consts';
+import Section from '../../components/section/section';
 
 const Agent = (): JSX.Element => {
-  const { success } = useAuthCookie();
-  const { sendRequest } = useAIAgent({ isAuthenticated: success });
+  const { loading: cookieLoading, success } = useAuthCookie();
+  const { loading: agentLoading, sendRequest } = useAIAgent({
+    isAuthenticated: !cookieLoading && success,
+  });
   const { messages, user, setUserName, sendAsUser, sendAsAssistant } = useChat();
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
+
+  const messagesWithAssistantThinking = [
+    ...messages,
+    ...(agentLoading
+      ? [
+          {
+            id: 'agent-thinking',
+            user: ASSISTANT_USER,
+            content: '🤔...',
+            timestamp: Date.now(),
+          },
+        ]
+      : []),
+  ];
 
   const handleSend = async () => {
     if (!input.trim()) return;
@@ -38,9 +54,9 @@ const Agent = (): JSX.Element => {
   };
 
   return (
-    <SectionWrapper sectionId={sectionIds.Agent}>
+    <Section sectionId={sectionIds.Agent}>
       <UsernameInput name={user.name} onChange={setUserName} />
-      <ChatHistory messages={messages} />
+      <ChatHistory messages={messagesWithAssistantThinking} />
       <div style={{ display: 'flex', gap: 8 }}>
         <input
           type="text"
@@ -55,7 +71,7 @@ const Agent = (): JSX.Element => {
           {loading ? 'Sending...' : 'Send'}
         </button>
       </div>
-    </SectionWrapper>
+    </Section>
   );
 };
 

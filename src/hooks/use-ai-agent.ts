@@ -1,4 +1,4 @@
-import { useCallback } from 'react';
+import { useCallback, useState } from 'react';
 
 /**
  * Custom hook to make requests to Agentic AI and log the response to the console.
@@ -13,11 +13,16 @@ type UseAIAgentProps = {
 export const AGENT_ENDPOINT = 'https://d1hmz7iun38izq.cloudfront.net';
 
 export const useAIAgent = ({ isAuthenticated = false }: UseAIAgentProps) => {
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<Error | null>(null);
+
   const sendRequest = useCallback(
     async (payload: unknown) => {
       if (!isAuthenticated) {
         return;
       }
+      setLoading(true);
+      setError(null);
       try {
         const response = await fetch(AGENT_ENDPOINT, {
           method: 'POST',
@@ -25,15 +30,18 @@ export const useAIAgent = ({ isAuthenticated = false }: UseAIAgentProps) => {
           body: JSON.stringify(payload),
         });
         const data = await response.json();
-        console.log('Agentic AI response:', data);
+        console.log('Agent response:', data);
+        setLoading(false);
         return data;
       } catch (error) {
-        console.error('Agentic AI request error:', error);
+        setLoading(false);
+        setError(error as Error);
+        console.error('Agent request error:', error);
         throw error;
       }
     },
     [isAuthenticated]
   );
 
-  return { sendRequest };
+  return { sendRequest, loading, error };
 };

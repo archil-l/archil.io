@@ -23,7 +23,7 @@ const navMessages = defineMessages({
   },
   agent: {
     id: 'nav.agent',
-    defaultMessage: '🤖',
+    defaultMessage: 'Agent',
   },
 });
 
