@@ -30,7 +30,6 @@ export const useAIAgent = ({ isAuthenticated = false }: UseAIAgentProps) => {
           body: JSON.stringify(payload),
         });
         const data = await response.json();
-        console.log('Agent response:', data);
         setLoading(false);
         return data;
       } catch (error) {

@@ -36,8 +36,8 @@ const Agent = (): JSX.Element => {
     setLoading(true);
     try {
       const response = await sendRequest({ query: input });
-      if (response && response.answer) {
-        sendAsAssistant(response.answer);
+      if (response && response.message) {
+        sendAsAssistant(response.message);
       } else {
         sendAsAssistant('No response from agent.');
       }
