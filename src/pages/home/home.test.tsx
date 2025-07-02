@@ -6,7 +6,7 @@ import { SectionProps } from '../../components/section/section-wrapper';
 import '../../tests/test-utils';
 
 // Mock child components
-jest.mock('../../components/section/section', () => ({
+jest.mock('../../components/section/section-with-markdown', () => ({
   __esModule: true,
   default: jest.fn(({ sectionId }: SectionProps) => <div>Section {sectionId}</div>),
 }));

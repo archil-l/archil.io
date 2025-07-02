@@ -1,4 +1,6 @@
 import React from 'react';
+
+import '../../tests/test-utils';
 import { screen } from '@testing-library/react';
 import Footer from './footer';
 import { renderWithProviders } from '../../tests/test-utils';
