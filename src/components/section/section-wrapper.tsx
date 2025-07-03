@@ -10,6 +10,7 @@ export interface SectionProps {
   children?: React.ReactNode;
   sectionId: sectionIds;
   $role?: string;
+  logo?: React.ReactNode;
   markdownOverrides?: MarkdownToJSX.Overrides;
   size?:
     | ''

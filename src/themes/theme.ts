@@ -58,6 +58,20 @@ export const lightTheme: DefaultTheme = {
           backgroundColor: '#fafafa',
           color: '#343a40',
           transition: 'background-color 2s ease',
+          assistantBubble: {
+            backgroundColor: '#e0f7fa',
+            color: '#006064',
+            border: '1px solid #b2ebf2',
+            transition: 'background-color 2s ease',
+            boxShadow: '2px 2px 1px rgba(178, 235, 242, 0.5)',
+          },
+          userBubble: {
+            backgroundColor: '#eff2f5',
+            color: '#343a40',
+            border: '1px solid #ced4da',
+            transition: 'background-color 2s ease',
+            boxShadow: '2px 2px 1px rgba(206, 212, 218, 0.5)',
+          },
         },
       },
       contact: {
@@ -126,6 +140,20 @@ export const darkTheme: DefaultTheme = {
           backgroundColor: '#28282b',
           color: '#bdbfc1',
           transition: 'background-color 2s ease',
+          assistantBubble: {
+            backgroundColor: '#343a40',
+            color: '#f8f9fa',
+            border: '1px solid #555',
+            transition: 'background-color 2s ease',
+            boxShadow: '1px 1px 2px rgba(255, 255, 255, 0.1)',
+          },
+          userBubble: {
+            backgroundColor: '#1c1c1e',
+            color: '#f8f9fa',
+            border: '1px solid #555',
+            transition: 'background-color 2s ease',
+            boxShadow: '1px 1px 2px rgba(255, 255, 255, 0.1)',
+          },
         },
       },
       contact: {

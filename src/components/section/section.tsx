@@ -9,12 +9,13 @@ type SectionHeaderProps = { sectionId: string; label: string };
 
 const SiteHeader = ({ sectionId, label }: SectionHeaderProps) => <h1 id={sectionId}>{label}</h1>;
 
-const Section = ({ sectionId, $role, size, children }: SectionProps) => {
+const Section = ({ sectionId, $role, size, logo, children }: SectionProps) => {
   const { formatMessage } = useIntl();
 
   return (
     <SectionWrapper {...{ sectionId, $role, size }}>
       <Space height="5rem" />
+      {logo}
       <SiteHeader sectionId={sectionId} label={formatMessage(navMessages[sectionId])} />
       {children}
       <Space height="7rem" />

@@ -12,11 +12,12 @@ export type ChatMessage = {
   timestamp: number;
 };
 
-export const ASSISTANT_USER: ChatUser = { id: 'assistant', name: 'Assistant' };
+export const ASSISTANT_USER: ChatUser = { id: 'assistant', name: 'Assistant 🦴' };
+export const GUEST_USER: ChatUser = { id: 'guest', name: 'Guest 🧑' };
 const LOCALSTORAGE_KEY = 'chatMessages';
 
 export const useChat = () => {
-  const [user, setUser] = useState<ChatUser>({ id: 'user', name: 'User' });
+  const [user, setUser] = useState<ChatUser>(GUEST_USER);
   const [messages, setMessages] = useState<ChatMessage[]>([]);
 
   useEffect(() => {

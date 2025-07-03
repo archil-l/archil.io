@@ -14,32 +14,37 @@ export const StyledChatWrapper = styled.div`
   display: flex;
   flex-direction: column;
 
-  .left-bubble {
-    background-color: #e0f7fa;
-    color: #006064;
-    padding: 8px 12px;
+  .bubble {
+    padding: 8px 16px;
     border-radius: 20px;
     margin-bottom: 8px;
     max-width: 80%;
-    align-self: flex-start;
-    border: 1px solid #b2ebf2;
   }
 
-  .right-bubble {
-    background-color: #eff2f5;
-    color: #343a40;
-    padding: 8px 12px;
-    border-radius: 20px;
-    margin-bottom: 8px;
-    max-width: 80%;
+  .assistant-bubble {
     align-self: flex-end;
-    border: 1px solid #ced4da;
+    background-color: ${({ theme }) =>
+      theme.colors.sections?.['agent'].chat?.assistantBubble?.backgroundColor};
+    color: ${({ theme }) => theme.colors.sections?.['agent'].chat?.assistantBubble?.color};
+    transition: ${({ theme }) =>
+      theme.colors.sections?.['agent'].chat?.assistantBubble?.transition};
+    border: ${({ theme }) => theme.colors.sections?.['agent'].chat?.assistantBubble?.border};
+    box-shadow: ${({ theme }) => theme.colors.sections?.['agent'].chat?.assistantBubble?.boxShadow};
+  }
+
+  .user-bubble {
+    align-self: flex-start;
+    background-color: ${({ theme }) =>
+      theme.colors.sections?.['agent'].chat?.userBubble?.backgroundColor};
+    color: ${({ theme }) => theme.colors.sections?.['agent'].chat?.userBubble?.color};
+    transition: ${({ theme }) => theme.colors.sections?.['agent'].chat?.userBubble?.transition};
+    border: ${({ theme }) => theme.colors.sections?.['agent'].chat?.userBubble?.border};
+    box-shadow: ${({ theme }) => theme.colors.sections?.['agent'].chat?.userBubble?.boxShadow};
   }
 
   strong {
     font-weight: bold;
     font-size: 0.9em;
-    margin-left: 4px;
   }
 
   sub {
@@ -87,7 +92,23 @@ export const StyledChatInputWrapper = styled.div`
     transition: ${({ theme }) => theme.colors.sections?.['agent'].chat?.transition};
   }
   .send-button {
-    color: ${({ theme }) => theme.colors.sections?.['agent'].chat?.color};
+    color: ${({ theme }) => theme.colors.sections?.['agent'].chat?.assistantBubble?.color};
     border: ${({ theme }) => theme.colors.sections?.['agent'].chat?.border};
+    background-color: ${({ theme }) => theme.colors.header?.backgroundColor};
+
+    &:focus,
+    &:hover {
+      background-color: ${({ theme }) =>
+        theme.colors.sections?.['agent'].chat?.userBubble?.backgroundColor};
+      color: ${({ theme }) => theme.colors.sections?.['agent'].chat?.userBubble?.color};
+      border: 1px solid ${({ theme }) => theme.colors.sections?.['agent'].chat?.userBubble?.color};
+    }
+
+    &:disabled {
+      background-color: ${({ theme }) => theme.colors.sections?.['agent'].chat?.backgroundColor};
+      color: ${({ theme }) => theme.colors.sections?.['agent'].chat?.color};
+      border: ${({ theme }) => theme.colors.sections?.['agent'].chat?.border};
+      cursor: not-allowed;
+    }
   }
 `;

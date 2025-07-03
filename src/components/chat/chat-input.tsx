@@ -26,6 +26,7 @@ const ChatInput = ({ loading, handleSendToAgent }: ChatInputProps): JSX.Element 
   return (
     <StyledChatInputWrapper>
       <input
+        id="chat-input"
         className="chat-input"
         type="text"
         value={input}
