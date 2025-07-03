@@ -17,8 +17,8 @@ export const useAIAgent = ({ isAuthenticated = false }: UseAIAgentProps) => {
   const [error, setError] = useState<Error | null>(null);
 
   const sendRequest = useCallback(
-    async (payload: unknown) => {
-      if (!isAuthenticated) {
+    async (prompt: string) => {
+      if (!isAuthenticated || !prompt) {
         return;
       }
       setLoading(true);
@@ -27,11 +27,16 @@ export const useAIAgent = ({ isAuthenticated = false }: UseAIAgentProps) => {
         const response = await fetch(AGENT_ENDPOINT, {
           method: 'POST',
           credentials: 'include',
-          body: JSON.stringify(payload),
+          body: JSON.stringify({ prompt }),
         });
-        const data = await response.json();
+        if (!response.ok) {
+          setLoading(false);
+          setError(new Error('Failed to fetch data from AI agent'));
+          throw new Error(response.statusText || 'Failed to fetch data from AI agent');
+        }
+        const { answer } = await response.json();
         setLoading(false);
-        return data;
+        return answer;
       } catch (error) {
         setLoading(false);
         setError(error as Error);

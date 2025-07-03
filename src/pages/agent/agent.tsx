@@ -33,9 +33,9 @@ const Agent = (): JSX.Element => {
     if (!input.trim()) return;
     sendAsUser(input);
     try {
-      const response = await sendRequest({ query: input });
-      if (response && response.message) {
-        sendAsAssistant(response.message);
+      const answer = await sendRequest(input);
+      if (answer) {
+        sendAsAssistant(answer);
       } else {
         sendAsAssistant('No response from assistant.');
       }
