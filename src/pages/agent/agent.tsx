@@ -6,7 +6,7 @@ import { ChatHistory } from '../../components/chat/chat-history';
 import { sectionIds } from '../../constants/consts';
 import Section from '../../components/section/section';
 import ChatInput from '../../components/chat/chat-input';
-import { AssistantLogo } from 'components/assistant-logo/assistant-logo';
+import { AssistantLogo } from '../../components/assistant-logo/assistant-logo';
 
 const Agent = (): JSX.Element => {
   const { loading: cookieLoading, success } = useAuthCookie();
