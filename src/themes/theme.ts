@@ -53,6 +53,12 @@ export const lightTheme: DefaultTheme = {
         backgroundColor: '#f8f9fa',
         color: '#343a40',
         transition: 'background-color 2s ease',
+        chat: {
+          border: '1px solid #ccc',
+          backgroundColor: '#fafafa',
+          color: '#f8f9fa',
+          transition: 'background-color 2s ease',
+        },
       },
       contact: {
         backgroundColor: '#f8f9fa',
@@ -115,6 +121,12 @@ export const darkTheme: DefaultTheme = {
         backgroundColor: '#343a40',
         color: '#f8f9fa',
         transition: 'background-color 2s ease',
+        chat: {
+          border: '1px solid #555',
+          backgroundColor: '#28282b',
+          color: '#bdbfc1',
+          transition: 'background-color 2s ease',
+        },
       },
       contact: {
         backgroundColor: '#28282b',

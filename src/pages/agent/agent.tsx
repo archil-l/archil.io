@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useAIAgent } from '../../hooks/use-ai-agent';
 import { useAuthCookie } from '../../hooks/use-auth';
 import { ASSISTANT_USER, useChat } from '../../hooks/use-chat';
-import { UsernameInput } from '../../components/username-input/username-input';
+import { UsernameInput } from '../../components/chat/username-input';
 import { ChatHistory } from '../../components/chat/chat-history';
 import { sectionIds } from '../../constants/consts';
 import Section from '../../components/section/section';
+import ChatInput from 'components/chat/chat-input';
 
 const Agent = (): JSX.Element => {
   const { loading: cookieLoading, success } = useAuthCookie();
@@ -13,8 +14,14 @@ const Agent = (): JSX.Element => {
     isAuthenticated: !cookieLoading && success,
   });
   const { messages, user, setUserName, sendAsUser, sendAsAssistant } = useChat();
-  const [input, setInput] = useState('');
-  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    // Automatically scroll to the bottom of the chat when messages change
+    const chatContainer = document.querySelector('.chat-history');
+    if (chatContainer) {
+      chatContainer.scrollTop = chatContainer.scrollHeight;
+    }
+  }, [messages]);
 
   const messagesWithAssistantThinking = [
     ...messages,
@@ -30,10 +37,9 @@ const Agent = (): JSX.Element => {
       : []),
   ];
 
-  const handleSend = async () => {
+  const handleSendToAgent = async (input: string) => {
     if (!input.trim()) return;
     sendAsUser(input);
-    setLoading(true);
     try {
       const response = await sendRequest({ query: input });
       if (response && response.message) {
@@ -43,34 +49,14 @@ const Agent = (): JSX.Element => {
       }
     } catch (error) {
       sendAsAssistant('Error contacting agent.');
-    } finally {
-      setLoading(false);
-      setInput('');
     }
-  };
-
-  const handleInputKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === 'Enter') handleSend();
   };
 
   return (
     <Section sectionId={sectionIds.Agent}>
       <UsernameInput name={user.name} onChange={setUserName} />
       <ChatHistory messages={messagesWithAssistantThinking} />
-      <div style={{ display: 'flex', gap: 8 }}>
-        <input
-          type="text"
-          value={input}
-          onChange={e => setInput(e.target.value)}
-          onKeyDown={handleInputKeyDown}
-          placeholder="Type your message..."
-          style={{ flex: 1 }}
-          disabled={loading}
-        />
-        <button onClick={handleSend} disabled={loading || !input.trim()}>
-          {loading ? 'Sending...' : 'Send'}
-        </button>
-      </div>
+      <ChatInput loading={agentLoading} handleSendToAgent={handleSendToAgent} />
     </Section>
   );
 };

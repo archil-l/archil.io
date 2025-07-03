@@ -3,7 +3,7 @@ import { AGENT_ENDPOINT } from './use-ai-agent';
 
 const AUTH_URL = `${AGENT_ENDPOINT}/sign-cookie`;
 
-export function useAuthCookie() {
+export const useAuthCookie = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<null | string>(null);
   const [success, setSuccess] = useState(false);
@@ -28,4 +28,4 @@ export function useAuthCookie() {
   }, []);
 
   return { loading, error, success };
-}
+};

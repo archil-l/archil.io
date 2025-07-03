@@ -13,6 +13,7 @@ export type ChatMessage = {
 };
 
 export const ASSISTANT_USER: ChatUser = { id: 'assistant', name: 'Assistant' };
+const LOCALSTORAGE_KEY = 'chatMessages';
 
 export const useChat = () => {
   const [user, setUser] = useState<ChatUser>({ id: 'user', name: 'User' });
@@ -20,13 +21,23 @@ export const useChat = () => {
 
   useEffect(() => {
     // Load initial messages from localStorage or any other source
-    const storedMessages = localStorage.getItem('chatMessages');
+    const storedMessages = localStorage.getItem(LOCALSTORAGE_KEY);
     if (storedMessages) {
-      setMessages(JSON.parse(storedMessages));
+      try {
+        // Parse the stored messages and ensure they are of type ChatMessage[]
+        const parsedMessages = JSON.parse(storedMessages) as ChatMessage[];
+        // Validate the structure of each message
+        setMessages(parsedMessages);
+      } catch (error) {
+        console.error('Failed to parse stored messages:', error);
+        // If parsing fails, reset messages to an empty array
+      }
     }
   }, []);
 
   useEffect(() => {
+    if (!user) return;
+    if (messages.length === 0) return;
     const updatedMessages = messages.slice().map(msg => {
       if (msg.user.id === 'user' && msg.user.name === 'User') {
         return { ...msg, user: user };
@@ -34,23 +45,27 @@ export const useChat = () => {
       return msg;
     });
     setMessages(updatedMessages);
-    // Save updated messages to localStorage
-    localStorage.setItem('chatMessages', JSON.stringify(updatedMessages));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user]);
 
-  const sendMessage = useCallback((content: string, sender: ChatUser) => {
-    const message: ChatMessage = {
-      id: `${Date.now()}-${Math.random()}`,
-      user: sender,
-      content,
-      timestamp: Date.now(),
-    };
-    setMessages(prev => [...prev, message]);
-    // Save messages to localStorage
-    localStorage.setItem('chatMessages', JSON.stringify([...messages, message]));
+  useEffect(() => {
+    if (messages.length === 0) return;
+    localStorage.setItem(LOCALSTORAGE_KEY, JSON.stringify(messages));
+  }, [messages]);
+
+  const sendMessage = useCallback(
+    (content: string, sender: ChatUser) => {
+      const message: ChatMessage = {
+        id: `${Date.now()}-${Math.random()}`,
+        user: sender,
+        content,
+        timestamp: Date.now(),
+      };
+      setMessages(prev => [...prev, message]);
+    },
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+    [messages, setMessages]
+  );
 
   const sendAsUser = useCallback(
     (content: string) => {

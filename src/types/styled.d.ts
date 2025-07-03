@@ -5,6 +5,9 @@ interface SectionTheme {
   backgroundColor: string;
   color: string;
   transition: string;
+  border?: string;
+  textColor?: string;
+  chat?: SectionTheme;
 }
 
 declare module 'styled-components' {
