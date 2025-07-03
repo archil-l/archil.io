@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useAIAgent } from '../../hooks/use-ai-agent';
 import { useAuthCookie } from '../../hooks/use-auth';
 import { ASSISTANT_USER, useChat } from '../../hooks/use-chat';
@@ -6,7 +6,7 @@ import { UsernameInput } from '../../components/chat/username-input';
 import { ChatHistory } from '../../components/chat/chat-history';
 import { sectionIds } from '../../constants/consts';
 import Section from '../../components/section/section';
-import ChatInput from 'components/chat/chat-input';
+import ChatInput from '../../components/chat/chat-input';
 
 const Agent = (): JSX.Element => {
   const { loading: cookieLoading, success } = useAuthCookie();
@@ -14,14 +14,6 @@ const Agent = (): JSX.Element => {
     isAuthenticated: !cookieLoading && success,
   });
   const { messages, user, setUserName, sendAsUser, sendAsAssistant } = useChat();
-
-  useEffect(() => {
-    // Automatically scroll to the bottom of the chat when messages change
-    const chatContainer = document.querySelector('.chat-history');
-    if (chatContainer) {
-      chatContainer.scrollTop = chatContainer.scrollHeight;
-    }
-  }, [messages]);
 
   const messagesWithAssistantThinking = [
     ...messages,

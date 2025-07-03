@@ -56,7 +56,7 @@ export const lightTheme: DefaultTheme = {
         chat: {
           border: '1px solid #ccc',
           backgroundColor: '#fafafa',
-          color: '#f8f9fa',
+          color: '#343a40',
           transition: 'background-color 2s ease',
         },
       },
