@@ -18,7 +18,7 @@ export const StyledChatWrapper = styled.div`
     padding: 8px 16px;
     border-radius: 20px;
     margin-bottom: 8px;
-    max-width: 80%;
+    max-width: 60%;
   }
 
   .assistant-bubble {
