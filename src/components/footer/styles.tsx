@@ -27,7 +27,15 @@ export const StyledFooter = styled.footer`
     }
   }
 
-  button.nav-button {
+  a.nav-button {
+    text-align: center;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 38px;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    white-space: nowrap;
     border: none;
     margin: 0;
     padding: 0 20px 0 20px;

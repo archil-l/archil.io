@@ -1,10 +1,10 @@
 import React from 'react';
 import { useIntl } from 'react-intl';
-import { useNavigate } from 'react-router';
 
 import navMessages from './messages';
 import { sectionIds } from '../../constants/consts';
 import { NavItem } from 'components/header/header';
+import { Link } from 'react-router';
 
 interface NavProps {
   navItem: NavItem;
@@ -12,6 +12,7 @@ interface NavProps {
 
 const Nav = ({ navItem }: NavProps) => {
   const { formatMessage } = useIntl();
+
   const label =
     navItem?.label ||
     formatMessage(
@@ -20,25 +21,19 @@ const Nav = ({ navItem }: NavProps) => {
       ]
     );
 
-  const navigate = useNavigate();
-
-  const handleNavigate = () => {
-    // Update the URL without reloading the page
-    if (location.pathname !== navItem.path) {
-      navigate(navItem.path);
+  const handleScroll = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    const targetId = navItem.section;
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      event.preventDefault();
+      targetElement.scrollIntoView({ behavior: 'smooth' });
     }
-    // This assumes that the sections are present in the DOM
-
-    const section = document.getElementById(navItem.section || sectionIds.Welcome);
-    section && section.scrollIntoView({ behavior: 'smooth' });
   };
 
-  `${navItem.section || sectionIds.Welcome}`.toLowerCase() as keyof typeof navMessages;
-
   return (
-    <button className="nav-button" onClick={handleNavigate}>
+    <Link className="nav-button" to={{ pathname: navItem.path }} onClick={handleScroll}>
       {label}
-    </button>
+    </Link>
   );
 };
 
