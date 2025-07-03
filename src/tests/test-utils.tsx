@@ -7,10 +7,14 @@ import { lightTheme, darkTheme } from '../themes/theme';
 
 jest.mock('react-router', () => ({
   __esModule: true,
-  BrowserRouter: ({ children }: { children: ReactNode }) => <div>{children}</div>,
+  HashRouter: ({ children }: { children: ReactNode }) => <div>{children}</div>,
   Route: ({ children }: { children: ReactNode }) => <div>{children}</div>,
   Routes: ({ children }: { children: ReactNode }) => <div>{children}</div>,
-  useNavigate: () => jest.fn(),
+  Link: ({ children, to }: { children: ReactNode; to: string }) => (
+    <a href={to} className="nav-button">
+      {children}
+    </a>
+  ),
 }));
 interface RenderWithProvidersProps {
   children: ReactNode;
