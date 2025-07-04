@@ -13,7 +13,7 @@ const Agent = (): JSX.Element => {
   const { loading: agentLoading, sendRequest } = useAIAgent({
     isAuthenticated: !cookieLoading && success,
   });
-  const { messages, sendAsUser, sendAsAssistant } = useChat();
+  const { messages, newChat, sendAsUser, sendAsAssistant } = useChat();
 
   const messagesWithAssistantThinking = [
     ...messages,
@@ -28,6 +28,10 @@ const Agent = (): JSX.Element => {
         ]
       : []),
   ];
+
+  const handleNewChat = () => {
+    newChat();
+  };
 
   const handleSendToAgent = async (input: string) => {
     if (!input.trim()) return;
@@ -47,7 +51,12 @@ const Agent = (): JSX.Element => {
   return (
     <Section sectionId={sectionIds.Agent} logo={<AssistantLogo />}>
       <ChatHistory messages={messagesWithAssistantThinking} />
-      <ChatInput loading={agentLoading} handleSendToAgent={handleSendToAgent} />
+      <ChatInput
+        loading={agentLoading}
+        messageCount={messages?.length || 0}
+        handleSendToAgent={handleSendToAgent}
+        handleNewChat={handleNewChat}
+      />
     </Section>
   );
 };

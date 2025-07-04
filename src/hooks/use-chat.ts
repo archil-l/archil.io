@@ -54,6 +54,11 @@ export const useChat = () => {
     localStorage.setItem(LOCALSTORAGE_KEY, JSON.stringify(messages));
   }, [messages]);
 
+  const newChat = useCallback(() => {
+    localStorage.removeItem(LOCALSTORAGE_KEY);
+    setMessages([]);
+  }, [setMessages]);
+
   const sendMessage = useCallback(
     (content: string, sender: ChatUser) => {
       const message: ChatMessage = {
@@ -89,6 +94,7 @@ export const useChat = () => {
   return {
     messages,
     user,
+    newChat,
     setUserName,
     sendAsUser,
     sendAsAssistant,

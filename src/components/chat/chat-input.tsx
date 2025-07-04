@@ -3,10 +3,17 @@ import { StyledChatInputWrapper } from './styles';
 
 type ChatInputProps = {
   loading: boolean;
+  messageCount: number;
   handleSendToAgent: (msg: string) => void;
+  handleNewChat: () => void;
 };
 
-const ChatInput = ({ loading, handleSendToAgent }: ChatInputProps): JSX.Element => {
+const ChatInput = ({
+  loading,
+  messageCount,
+  handleSendToAgent,
+  handleNewChat,
+}: ChatInputProps): JSX.Element => {
   const [input, setInput] = useState('');
 
   const handleSend = () => {
@@ -37,6 +44,13 @@ const ChatInput = ({ loading, handleSendToAgent }: ChatInputProps): JSX.Element 
       />
       <button className="send-button" onClick={handleSend} disabled={loading || !input.trim()}>
         {loading ? 'Sending...' : 'Send'}
+      </button>
+      <button
+        className="new-chat"
+        onClick={handleNewChat}
+        disabled={!messageCount || messageCount < 2}
+      >
+        {'New chat'}
       </button>
     </StyledChatInputWrapper>
   );

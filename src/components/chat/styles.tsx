@@ -91,7 +91,8 @@ export const StyledChatInputWrapper = styled.div`
     background-color: ${({ theme }) => theme.colors.sections?.['agent'].chat?.backgroundColor};
     transition: ${({ theme }) => theme.colors.sections?.['agent'].chat?.transition};
   }
-  .send-button {
+  .send-button,
+  .new-chat {
     color: ${({ theme }) => theme.colors.sections?.['agent'].chat?.assistantBubble?.color};
     border: ${({ theme }) => theme.colors.sections?.['agent'].chat?.border};
     background-color: ${({ theme }) => theme.colors.header?.backgroundColor};
