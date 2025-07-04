@@ -15,6 +15,7 @@ jest.mock('react-router', () => ({
       {children}
     </a>
   ),
+  Navigate: ({ to }: { to: string }) => <div>Redirecting to {to}</div>,
 }));
 interface RenderWithProvidersProps {
   children: ReactNode;

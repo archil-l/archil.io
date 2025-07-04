@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { IntlProvider } from 'react-intl';
-import { BrowserRouter, HashRouter } from 'react-router';
+import { HashRouter } from 'react-router';
 
 import { ColorSchemeProvider } from './context/color-scheme-context';
 import App from './pages/app/app';

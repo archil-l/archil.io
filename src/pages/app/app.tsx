@@ -3,7 +3,7 @@ import { ColorSchemeContext } from '../../context/color-scheme-context';
 
 import Footer from '../../components/footer/footer';
 import Header, { NavItem } from '../../components/header/header';
-import { Route, Routes } from 'react-router';
+import { Navigate, Route, Routes } from 'react-router';
 import Home from '../home/home';
 import Teaching from '../teaching/teaching';
 import Agent from '../agent/agent';
@@ -32,6 +32,7 @@ const App: React.FC = () => {
         <Route path="/teaching" element={<Teaching />} />
         <Route path="/agent" element={<Agent />} />
         <Route path="/content/*" element={<div>Error</div>} />
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
       <Footer />
     </React.Fragment>
