@@ -10,6 +10,15 @@ type UseAIAgentProps = {
   isAuthenticated?: boolean;
 };
 
+export type BedrockMessage = {
+  role: 'user' | 'assistant';
+  content: MessageContent[];
+};
+
+export type MessageContent = {
+  text: string;
+};
+
 export const AGENT_ENDPOINT = 'https://d1hmz7iun38izq.cloudfront.net';
 
 export const useAIAgent = ({ isAuthenticated = false }: UseAIAgentProps) => {
@@ -17,8 +26,8 @@ export const useAIAgent = ({ isAuthenticated = false }: UseAIAgentProps) => {
   const [error, setError] = useState<Error | null>(null);
 
   const sendRequest = useCallback(
-    async (prompt: string) => {
-      if (!isAuthenticated || !prompt) {
+    async (conversation: BedrockMessage[] = []) => {
+      if (!isAuthenticated || !conversation || conversation.length === 0) {
         return;
       }
       setLoading(true);
@@ -27,7 +36,7 @@ export const useAIAgent = ({ isAuthenticated = false }: UseAIAgentProps) => {
         const response = await fetch(AGENT_ENDPOINT, {
           method: 'POST',
           credentials: 'include',
-          body: JSON.stringify({ prompt }),
+          body: JSON.stringify({ conversation }),
         });
         if (!response.ok) {
           setLoading(false);

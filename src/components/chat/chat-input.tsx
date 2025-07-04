@@ -4,21 +4,21 @@ import { StyledChatInputWrapper } from './styles';
 type ChatInputProps = {
   loading: boolean;
   messageCount: number;
-  handleSendToAgent: (msg: string) => void;
+  handleNewMessage: (msg: string) => void;
   handleNewChat: () => void;
 };
 
 const ChatInput = ({
   loading,
   messageCount,
-  handleSendToAgent,
+  handleNewMessage,
   handleNewChat,
 }: ChatInputProps): JSX.Element => {
   const [input, setInput] = useState('');
 
   const handleSend = () => {
     if (input.trim()) {
-      handleSendToAgent(input.trim());
+      handleNewMessage(input.trim());
       setInput(''); // Clear input after sending
     }
   };

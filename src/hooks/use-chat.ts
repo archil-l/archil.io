@@ -1,7 +1,7 @@
 import { useState, useCallback, useEffect } from 'react';
 
 export type ChatUser = {
-  id: string;
+  id: 'user' | 'assistant';
   name: string;
 };
 
@@ -13,7 +13,7 @@ export type ChatMessage = {
 };
 
 export const ASSISTANT_USER: ChatUser = { id: 'assistant', name: 'Assistant 🦴' };
-export const GUEST_USER: ChatUser = { id: 'guest', name: 'Guest 🧑' };
+export const GUEST_USER: ChatUser = { id: 'user', name: 'Guest 🧑' };
 const LOCALSTORAGE_KEY = 'chatMessages';
 
 export const useChat = () => {
@@ -59,7 +59,7 @@ export const useChat = () => {
     setMessages([]);
   }, [setMessages]);
 
-  const sendMessage = useCallback(
+  const postMessage = useCallback(
     (content: string, sender: ChatUser) => {
       const message: ChatMessage = {
         id: `${Date.now()}-${Math.random()}`,
@@ -73,18 +73,18 @@ export const useChat = () => {
     [messages, setMessages]
   );
 
-  const sendAsUser = useCallback(
+  const postAsUser = useCallback(
     (content: string) => {
-      sendMessage(content, user);
+      postMessage(content, user);
     },
-    [user, sendMessage]
+    [user, postMessage]
   );
 
-  const sendAsAssistant = useCallback(
+  const postAsAssistant = useCallback(
     (content: string) => {
-      sendMessage(content, ASSISTANT_USER);
+      postMessage(content, ASSISTANT_USER);
     },
-    [sendMessage]
+    [postMessage]
   );
 
   const setUserName = useCallback((name: string) => {
@@ -96,7 +96,7 @@ export const useChat = () => {
     user,
     newChat,
     setUserName,
-    sendAsUser,
-    sendAsAssistant,
+    postAsUser,
+    postAsAssistant,
   };
 };
