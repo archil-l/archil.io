@@ -1,7 +1,7 @@
 import React, { Fragment, HTMLAttributes } from 'react';
 import SectionWithMarkdown from '../../components/section/section-with-markdown';
 import Divider from '../../components/layout/divider';
-import { sectionIds } from '../../constants/consts';
+import { sectionIds } from '../../constants/nav-consts';
 import Links from '../../components/links/links';
 
 const homeMarkdownComponents = {

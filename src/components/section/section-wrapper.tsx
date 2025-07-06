@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { sectionIds } from 'constants/consts';
+import { sectionIds } from 'constants/nav-consts';
 import Column from '../layout/column';
 import Container from '../layout/container';
 import Row from '../layout/row';

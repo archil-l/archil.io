@@ -7,7 +7,7 @@ import Row from '../layout/row';
 import { StyledHeader } from './styles';
 
 import Nav from '../nav/nav';
-import { PageIds, sectionIds } from '../../constants/consts';
+import { PageIds, sectionIds } from '../../constants/nav-consts';
 
 export type NavItem = {
   section: sectionIds;

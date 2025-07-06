@@ -1,7 +1,5 @@
 import { useEffect, useState } from 'react';
-import { AGENT_ENDPOINT } from './use-ai-agent';
-
-const AUTH_URL = `${AGENT_ENDPOINT}/sign-cookie`;
+import { API_ENDPOINTS } from '../constants/api-consts';
 
 export const useAuthCookie = () => {
   const [loading, setLoading] = useState(true);
@@ -9,7 +7,7 @@ export const useAuthCookie = () => {
   const [success, setSuccess] = useState(false);
 
   useEffect(() => {
-    fetch(AUTH_URL, {
+    fetch(API_ENDPOINTS.AUTH, {
       method: 'GET',
       credentials: 'include', // Important: include cookies
     })

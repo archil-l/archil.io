@@ -2,7 +2,7 @@ import React from 'react';
 import { useIntl } from 'react-intl';
 
 import navMessages from './messages';
-import { sectionIds } from '../../constants/consts';
+import { sectionIds } from '../../constants/nav-consts';
 import { NavItem } from 'components/header/header';
 import { Link } from 'react-router';
 

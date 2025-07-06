@@ -7,7 +7,7 @@ import { Navigate, Route, Routes } from 'react-router';
 import Home from '../home/home';
 import Teaching from '../teaching/teaching';
 import Agent from '../agent/agent';
-import { PageIds, sectionIds } from '../../constants/consts';
+import { PageIds, sectionIds } from '../../constants/nav-consts';
 
 const App: React.FC = () => {
   const { appearance } = React.useContext(ColorSchemeContext);

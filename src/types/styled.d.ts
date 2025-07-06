@@ -1,4 +1,4 @@
-import { sectionIds } from 'constants/consts';
+import { sectionIds } from 'constants/nav-consts';
 import { C } from 'react-router/dist/development/register-DCE0tH5m';
 import 'styled-components';
 
