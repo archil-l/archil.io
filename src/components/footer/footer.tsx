@@ -13,7 +13,7 @@ const Footer = () => {
       <Container>
         <Row>
           <Column size="six">
-            <p>&copy; 2025 Archil Lelashvili</p>
+            <p>&copy; 2026 Archil Lelashvili</p>
           </Column>
           <Column size="six" className="footer-logo">
             <Nav

@@ -14,7 +14,7 @@ describe('Footer', () => {
 
   it('renders the footer with copyright', () => {
     renderFooter();
-    expect(screen.getByText(/© 2025 Archil Lelashvili/i)).toBeInTheDocument();
+    expect(screen.getByText(/© 2026 Archil Lelashvili/i)).toBeInTheDocument();
   });
 
   it('renders the React link', () => {
