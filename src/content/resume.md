@@ -8,9 +8,11 @@ NU-trained front-end leaning software engineer with more than 3 years experience
 
 ### Professional Experience
 
-#### Frontend Engineer - Amazon Robotics, Sortation Insights Team - North Reading, MA<span style="float:right;">Jan 2025 - present</span>
+#### Frontend Engineer II (SDE II) - Amazon Robotics, Sortation Insights Team - North Reading, MA<span style="float:right;">Jan 2025 - present</span>
 
-- Developing equipment health dashboards to monitor performance of OutBound Dock Automation ([OBDA](https://www.aboutamazon.com/stories/amazon-robotics-autonomous-robot-proteus-warehouse-packages)) robotic equipment, like Cardinal, Proteus and others.
+- Architected and implemented infrastructure-as-code for proactive management systems for robotic fleets using agents, MCP servers, knowledge bases, and memory management. Leveraged alarm events as triggers for multistep workflows and fault trees spanning fully automated and human-in-the-loop scenarios. Built and deployed multiple agentic runtimes and frameworks in production, iterating and migrating as needed to determine the best fit for large-scale enterprise deployment (AWS Bedrock, AgentCore, and Strands).
+- Built a full-stack agentic web application integrating on-demand visualization capabilities and workflow components in multi-party conversational applications, using React Router v7 (Remix) and React 19 hosted in AWS.
+- Developed dashboard applications for managing and monitoring robotic systems used in outbound dock automation. Rearchitected an existing web solution, reducing load times from over 15s to 2s through conditional rendering, client-side caching, and error boundaries. Implemented feature flags, integration tests, and e2e tests, enabling migration from bi-weekly releases to full CI/CD. Established client-side monitoring and observability to measure and report load times and errors for all endpoints using AWS CloudWatch real-time dashboards.
 
 #### **Software Engineer II** - Quickbase Inc. - Boston, MA<span style="float:right;">Feb 2024 - Jan 2025</span>
 

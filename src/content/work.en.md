@@ -2,7 +2,11 @@
 
 ![Sortation at Amazon Robotics](https://assets.aboutamazon.com/dims4/default/c90ddd3/2147483647/strip/true/crop/1600x900+0+0/resize/1320x743!/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2Ff8%2F1b%2F29a9dcae4fe489b02d520132c0b6%2Fabout-amazon-inline-inline008-amazon-deliveringthefuture-robotics-amazon-mqy1-091124-ls-225-copy-6458x3632.jpg)
 
-I'm **Frontend Engineer II** on the 📦 Sortation Insights team at [Amazon Robotics](https://www.aboutamazon.com/news/operations/amazon-robotics-robots-fulfillment-center). In this role, I build scalable, reliable, and high-performance web applications that manage and monitor robotic systems used in outbound dock automation. My team builds advanced tools aimed at optimizing Overall Equipment Effectiveness (OEE) across robotic sortation processes.
+I'm **Frontend Engineer II** on the 📦 Sortation Insights team at [Amazon Robotics](https://www.aboutamazon.com/news/operations/amazon-robotics-robots-fulfillment-center). My work spans two main areas — dashboard tooling and agentic infrastructure for robotic fleet management.
+
+On the agentic side, I've been building proactive management systems using agents, MCP servers, knowledge bases, and memory. Alarm events trigger multistep workflows across fully automated and human-in-the-loop scenarios. I've shipped and iterated across multiple agentic runtimes and frameworks in production — AWS Bedrock, AgentCore, and Strands. I also built a full-stack agentic web app with multi-party conversational UX using React Router v7 (Remix) and React 19.
+
+On the dashboard side, I rearchitected a web solution that was taking 15+ seconds to load down to 2s. I introduced feature flags, integration and e2e tests to move from bi-weekly releases to full CI/CD. I also set up real-time CloudWatch dashboards to track load times and errors across all endpoints.
 
 ---
 
