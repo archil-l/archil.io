@@ -5,12 +5,15 @@ const Banner = styled.div`
   background-color: ${({ theme }) => theme.colors.primary};
   color: ${({ theme }) => theme.colors.background};
   padding: 10px 20px;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  justify-content: center;
-  gap: 12px;
   font-size: 14px;
-  flex-wrap: wrap;
+
+  span {
+    grid-column: 2;
+    text-align: center;
+  }
 
   a {
     color: ${({ theme }) => theme.colors.background};
@@ -19,11 +22,14 @@ const Banner = styled.div`
   }
 
   button {
+    grid-column: 3;
+    justify-self: end;
     background: transparent;
     border: 1px solid ${({ theme }) => theme.colors.background};
     color: ${({ theme }) => theme.colors.background};
     border-radius: 4px;
-    padding: 0 20px 0 20px;
+    padding: 0 20px;
+    margin: 0px;
     cursor: pointer;
     font-size: 13px;
     white-space: nowrap;
