@@ -56,7 +56,7 @@ const RedirectBanner = () => {
   return (
     <Banner role="banner">
       <span>
-        Check out my new AI-powered version of this site —{' '}
+        Check out my new AI-powered version of this site 🚀 —{' '}
         <a href="https://ask.archil.io" target="_blank" rel="noopener noreferrer">
           ask.archil.io
         </a>
