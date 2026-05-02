@@ -25,8 +25,8 @@ const App: React.FC = () => {
 
   return (
     <React.Fragment>
-      <RedirectBanner />
       <Header {...{ navList }} />
+      <RedirectBanner />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
