@@ -16,6 +16,11 @@ jest.mock('../../components/header/header', () => ({
   default: jest.fn(() => <header>Header</header>),
 }));
 
+jest.mock('../../components/redirect-banner/redirect-banner', () => ({
+  __esModule: true,
+  default: jest.fn(() => null),
+}));
+
 jest.mock('../home/home', () => ({
   __esModule: true,
   default: jest.fn(() => <main>Home</main>),
