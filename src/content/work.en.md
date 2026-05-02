@@ -12,7 +12,7 @@ I previously worked at the enterprise SaaS platform [Quickbase](https://www.quic
 
 ### Quickbase's Navigation ([Release Notes](https://helpv2.quickbase.com/hc/en-us/articles/30212936236948-Quickbase-September-2024-Release-Notes#h_01J7BD3PQ33X5HVGPX3SEJSCM8))
 
-![New Navigation](https://helpv2.quickbase.com/hc/article_attachments/30267023632788)
+![New Navigation](/quickbase/new-navigation.gif)
 
 Rolled out in 2024, Quickbase's navigation has been rebuilt from the ground up to provide a more modern and intuitive experience for users. My contribution to this feature was as follows:
 
@@ -23,7 +23,7 @@ Rolled out in 2024, Quickbase's navigation has been rebuilt from the ground up t
 
 ### Quickbase's Summary Report ([Release Notes](https://helpv2.quickbase.com/hc/en-us/articles/23804944584468-Quickbase-February-2024-Release-Notes#h_01HPT7ASHWVSMB064ADPVMTR80))
 
-![New Summary Report](https://assets.marketing.quickbase.com/product/Screenshots/_1320x935_crop_center-center_82_line/product-screenshots-reporting-and-dashboards-visualizations.png.webp)
+![New Summary Report](/quickbase/summary-report.webp)
 
 New enhanced summary reports offered streamlined navigation, making it easier than ever to find and analyze data. Report Builder Panel enabled consistent interaction across various report types with our unified panel experience. I am specially proud of having completed this feature with my own team.
 
@@ -36,7 +36,7 @@ New enhanced summary reports offered streamlined navigation, making it easier th
 
 ### Quickbase's Forms Experience ([Release Notes](https://helpv2.quickbase.com/hc/en-us/articles/16259648646292-Quickbase-June-2023-release-notes#h_01GAH1YHWP30JQ63J1ZCZ74YCN))
 
-![New Forms Experience](https://helpv2.quickbase.com/hc/article_attachments/27269565298196)
+![New Forms Experience](/quickbase/forms.png)
 
 New forms were released in 2023 and offered form builders a drag-and-drop WYSIWYG experience when designing forms. I personally built and refined more than dozen field components and embedded existing reports into the new form experience. These are my contributions:
 
@@ -49,7 +49,7 @@ New forms were released in 2023 and offered form builders a drag-and-drop WYSIWY
 
 ### Quickbase's Calendar Dashboard Widget ([Release Notes](https://helpv2.quickbase.com/hc/en-us/articles/4418012983828-Quickbase-January-2022-Release-Notes))
 
-![New Dashboard Widget](https://helpv2.quickbase.com/hc/article_attachments/4522850223380/jan.image.1.png)
+![New Dashboard Widget](/quickbase/calendars.png)
 
 Released in 2022, calendar report for the new dashboards offered new look and feel, making them more vibrant and easier to resize. Supported views to see a single day, week, or month, as well as drag and drop of events on the calendar to update start or end dates. I contributed to this feature by building the calendar report component and improving backend APIs. Here are my contributions:
 

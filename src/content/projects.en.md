@@ -1,10 +1,11 @@
 <SectionHeader sectionId="projects">Projects 🪚</SectionHeader>
 
-### Personal page AI assistant 🤖 (in progress)
+### Personal page AI assistant 🤖
 
-This personal assistant will be able to interact with site visitors on my behalf and accomplish basic tasks using connected tools (e.g., sending emails and notifications). It is based on a secure, cloud-based AI agent with a custom backend designed to keep sensitive API keys protected. The solution uses an AWS-hosted API and leverages CloudFront signed cookies to reduce the risk of AI agent abuse.
+[ask.archil.io](https://ask.archil.io) is an AI-powered personal website where visitors can chat with a Claude-powered assistant on my behalf. It can answer questions about my background, show my resume as an interactive PDF, and display an animated architecture diagram explaining how the site itself is built.
 
-- Backend infrastructure is provisioned with **AWS CDK, including Lambda functions, API Gateway, CloudFront, and Secrets Manager.**
-- API access is restricted using CloudFront signed cookies, managed by a dedicated cookie signer Lambda.
-- Private keys are securely stored in AWS Secrets Manager and never exposed to the frontend; automated scripts handle key generation, rotation, and deployment.
-- See the backend implementation on [GitHub](https://github.com/archil-l/secure-ai-agent).
+- Built with **React 19, React Router 7, Tailwind CSS 4**, and the **Anthropic SDK** (Claude Haiku 4.5) for streaming chat;
+- Backend runs on **AWS Lambda** with **CloudFront, API Gateway v2, and S3**; infrastructure provisioned with **AWS CDK**;
+- Auth uses short-lived **JWT tokens** + **Cloudflare Turnstile** CAPTCHA to prevent abuse without requiring a login;
+- Tools are served via a custom **MCP server** ([mcp-ask-archil](https://github.com/archil-l/mcp-ask-archil)) that exposes interactive HTML apps (resume viewer, architecture diagram) rendered in sandboxed iframes;
+- See the site source on [GitHub](https://github.com/archil-l/ask-archil-io).
