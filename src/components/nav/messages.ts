@@ -21,10 +21,6 @@ const navMessages = defineMessages({
     id: 'nav.teaching',
     defaultMessage: 'Teaching',
   },
-  agent: {
-    id: 'nav.agent',
-    defaultMessage: 'Chat with my assistant',
-  },
 });
 
 export default navMessages;
